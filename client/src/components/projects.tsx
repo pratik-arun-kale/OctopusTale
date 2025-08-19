@@ -41,11 +41,11 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-16 lg:py-24 bg-slate-50" data-testid="projects-section">
+    <section id="projects" className="py-16 lg:py-24 bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 relative" data-testid="projects-section">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4" data-testid="projects-title">Our Projects</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto" data-testid="projects-subtitle">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" data-testid="projects-title">Our Projects</h2>
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto" data-testid="projects-subtitle">
             Comprehensive AI-powered solutions designed to elevate every aspect of sports performance and team management.
           </p>
         </div>
@@ -54,7 +54,7 @@ const Projects = () => {
           {projects.map((project) => (
             <div 
               key={project.id} 
-              className="bg-white rounded-xl shadow-lg overflow-hidden"
+              className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl shadow-2xl overflow-hidden hover:bg-white/20 hover:scale-105 transition-all duration-300"
               data-testid={`project-card-${project.id}`}
             >
               <img 
@@ -64,17 +64,17 @@ const Projects = () => {
                 data-testid={`project-image-${project.id}`}
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3" data-testid={`project-name-${project.id}`}>
+                <h3 className="text-xl font-bold text-white mb-3" data-testid={`project-name-${project.id}`}>
                   {project.name}
                 </h3>
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed" data-testid={`project-description-${project.id}`}>
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed" data-testid={`project-description-${project.id}`}>
                   {project.description}
                 </p>
                 <div className="space-y-2 mb-4">
                   {project.features.map((feature, index) => (
                     <div 
                       key={index} 
-                      className="flex items-center text-sm text-gray-600"
+                      className="flex items-center text-sm text-gray-200"
                       data-testid={`project-feature-${project.id}-${index}`}
                     >
                       <span className={`w-2 h-2 ${project.dotColor} rounded-full mr-2`}></span>
@@ -83,7 +83,7 @@ const Projects = () => {
                   ))}
                 </div>
                 <Button 
-                  className={`${project.buttonColor} text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors`}
+                  className="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-white/30 hover:scale-105 transition-all duration-300"
                   data-testid={`button-learn-more-${project.id}`}
                 >
                   Learn More

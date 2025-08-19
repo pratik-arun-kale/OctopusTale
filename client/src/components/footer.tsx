@@ -7,18 +7,19 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white" data-testid="footer">
+    <footer className="bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white relative" data-testid="footer">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
-          <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4" data-testid="footer-logo">Tales</h3>
-            <p className="text-gray-300 leading-relaxed" data-testid="footer-description">
-              Every field needs a management system and the more automated the better in this age where technology rules the world. Every sport has its own speciality and we create the necessary tools for management through apps and provide consultation so you know better. Manage people, places and finance through our apps to make everyday sport data easier to handle. We have successfully created apps already available in play store and are working on many more.
-            </p>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold mb-4" data-testid="footer-services-title">Services</h4>
+        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="md:col-span-2">
+              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent" data-testid="footer-logo">Tales</h3>
+              <p className="text-gray-300 leading-relaxed" data-testid="footer-description">
+                Every field needs a management system and the more automated the better in this age where technology rules the world. Every sport has its own speciality and we create the necessary tools for management through apps and provide consultation so you know better. Manage people, places and finance through our apps to make everyday sport data easier to handle. We have successfully created apps already available in play store and are working on many more.
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-semibold mb-4" data-testid="footer-services-title">Services</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
                 <button 
@@ -57,10 +58,10 @@ const Footer = () => {
                 </button>
               </li>
             </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold mb-4" data-testid="footer-company-title">Company</h4>
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-semibold mb-4" data-testid="footer-company-title">Company</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
                 <button 
@@ -90,11 +91,12 @@ const Footer = () => {
                 </button>
               </li>
             </ul>
+            </div>
           </div>
-        </div>
-        
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p data-testid="footer-copyright">&copy; 2024 Tales. All rights reserved.</p>
+          
+          <div className="border-t border-white/10 mt-8 pt-8 text-center text-gray-400">
+            <p data-testid="footer-copyright">&copy; 2024 Tales. All rights reserved.</p>
+          </div>
         </div>
       </div>
     </footer>
