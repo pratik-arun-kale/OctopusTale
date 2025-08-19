@@ -41,7 +41,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-16 lg:py-24 bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 relative" data-testid="projects-section">
+    <section id="projects" className="py-16 lg:py-24 bg-gradient-to-br from-black via-gray-900 to-slate-900 relative" data-testid="projects-section">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" data-testid="projects-title">Our Projects</h2>

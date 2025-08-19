@@ -2,7 +2,7 @@ import { BarChart3, Smartphone, Cloud, Lightbulb } from "lucide-react";
 
 const Services = () => {
   return (
-    <section id="services" className="py-16 lg:py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 relative" data-testid="services-section">
+    <section id="services" className="py-16 lg:py-24 bg-gradient-to-br from-black via-gray-900 to-slate-900 relative" data-testid="services-section">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" data-testid="services-title">What We Do</h2>

@@ -18,7 +18,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white/10 backdrop-blur-md border-b border-white/20 shadow-lg fixed w-full top-0 z-50" data-testid="header">
+    <header className="bg-black/70 backdrop-blur-md border-b border-white/20 shadow-lg fixed w-full top-0 z-50" data-testid="header">
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
