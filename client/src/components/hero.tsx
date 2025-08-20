@@ -7,12 +7,24 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-slate-900">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjEpIi8+Cjwvc3ZnPg==')] opacity-20"></div>
         
+        {/* Blended Jellyfish */}
+        <div className="absolute top-20 right-10 w-64 h-96 opacity-30 pointer-events-none animate-float-gentle">
+          <img 
+            src="@assets/image_1755719289691.png" 
+            alt=""
+            className="w-full h-full object-contain mix-blend-screen animate-drift"
+            style={{
+              filter: 'blur(1px) brightness(0.8) contrast(1.2) saturate(1.5)',
+            }}
+          />
+        </div>
+        
         {/* Floating particles */}
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
             <div
               key={i}
-              className="absolute w-1 h-1 bg-white rounded-full opacity-30 animate-pulse"
+              className="absolute w-1 h-1 bg-blue-400 rounded-full opacity-40 animate-pulse"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,

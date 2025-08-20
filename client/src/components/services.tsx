@@ -2,8 +2,21 @@ import { BarChart3, Smartphone, Cloud, Lightbulb } from "lucide-react";
 
 const Services = () => {
   return (
-    <section id="services" className="py-16 lg:py-24 bg-gradient-to-br from-black via-gray-900 to-slate-900 relative" data-testid="services-section">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-16 lg:py-24 bg-gradient-to-br from-black via-gray-900 to-slate-900 relative overflow-hidden" data-testid="services-section">
+      {/* Blended Octopus */}
+      <div className="absolute bottom-0 left-0 w-72 h-96 opacity-20 pointer-events-none animate-float-gentle">
+        <img 
+          src="@assets/download (10)_1755719298952.jpg" 
+          alt=""
+          className="w-full h-full object-contain mix-blend-soft-light animate-drift"
+          style={{
+            filter: 'blur(2px) brightness(0.6) contrast(1.5) hue-rotate(15deg)',
+            transform: 'rotate(-15deg) scale(1.2)'
+          }}
+        />
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" data-testid="services-title">What We Do</h2>
         </div>
