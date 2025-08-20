@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
+import octopusImage from "@assets/download (10)_1755719298952.jpg";
 
 interface ContactFormData {
   name: string;
@@ -65,7 +66,7 @@ const Contact = () => {
       {/* Blended Octopus - Mirrored */}
       <div className="absolute top-16 right-0 w-64 h-80 opacity-15 pointer-events-none animate-float-gentle">
         <img 
-          src="@assets/download (10)_1755719298952.jpg" 
+          src={octopusImage} 
           alt=""
           className="w-full h-full object-contain mix-blend-luminosity animate-drift"
           style={{

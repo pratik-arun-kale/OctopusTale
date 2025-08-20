@@ -1,4 +1,5 @@
 import { BarChart3, Smartphone, Cloud, Lightbulb } from "lucide-react";
+import octopusImage from "@assets/download (10)_1755719298952.jpg";
 
 const Services = () => {
   return (
@@ -6,7 +7,7 @@ const Services = () => {
       {/* Blended Octopus */}
       <div className="absolute bottom-0 left-0 w-72 h-96 opacity-20 pointer-events-none animate-float-gentle">
         <img 
-          src="@assets/download (10)_1755719298952.jpg" 
+          src={octopusImage} 
           alt=""
           className="w-full h-full object-contain mix-blend-soft-light animate-drift"
           style={{

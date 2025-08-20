@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import jellyfishImage from "@assets/image_1755719289691.png";
 
 const Projects = () => {
   const projects = [
@@ -45,7 +46,7 @@ const Projects = () => {
       {/* Blended Jellyfish - Different Position */}
       <div className="absolute top-32 right-20 w-48 h-64 opacity-25 pointer-events-none animate-float-gentle">
         <img 
-          src="@assets/image_1755719289691.png" 
+          src={jellyfishImage} 
           alt=""
           className="w-full h-full object-contain mix-blend-overlay animate-drift"
           style={{

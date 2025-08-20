@@ -1,4 +1,5 @@
 import { Building2, CheckCircle, Cloud, Zap } from "lucide-react";
+import jellyfishImage from "@assets/image_1755719289691.png";
 
 const Hero = () => {
   return (
@@ -10,7 +11,7 @@ const Hero = () => {
         {/* Blended Jellyfish */}
         <div className="absolute top-20 right-10 w-64 h-96 opacity-30 pointer-events-none animate-float-gentle">
           <img 
-            src="@assets/image_1755719289691.png" 
+            src={jellyfishImage} 
             alt=""
             className="w-full h-full object-contain mix-blend-screen animate-drift"
             style={{
