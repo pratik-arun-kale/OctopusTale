@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import jellyfishImage from "@assets/image_1755719289691.png";
+import octopusImage from "@assets/download__10_-removebg-preview_1755719654422.png";
 
 const Projects = () => {
   const projects = [
@@ -43,15 +43,15 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-16 lg:py-24 bg-gradient-to-br from-black via-gray-900 to-slate-900 relative overflow-hidden" data-testid="projects-section">
-      {/* Blended Jellyfish - Different Position */}
-      <div className="absolute top-32 right-20 w-48 h-64 opacity-25 pointer-events-none animate-float-gentle">
+      {/* Blended Octopus - Different Position */}
+      <div className="absolute top-32 right-20 w-48 h-64 opacity-30 pointer-events-none animate-float-gentle">
         <img 
-          src={jellyfishImage} 
+          src={octopusImage} 
           alt=""
-          className="w-full h-full object-contain mix-blend-overlay animate-drift"
+          className="w-full h-full object-contain mix-blend-screen animate-drift"
           style={{
-            filter: 'blur(1.5px) brightness(0.7) contrast(1.3) saturate(1.5) hue-rotate(30deg)',
-            transform: 'rotate(45deg)',
+            filter: 'brightness(0.8) contrast(1.3) saturate(1.4) hue-rotate(-30deg)',
+            transform: 'rotate(45deg) scaleX(-1)',
             animationDelay: '2s'
           }}
         />

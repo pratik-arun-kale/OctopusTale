@@ -1,5 +1,5 @@
 import { Building2, CheckCircle, Cloud, Zap } from "lucide-react";
-import jellyfishImage from "@assets/image_1755719289691.png";
+import octopusImage from "@assets/download__10_-removebg-preview_1755719654422.png";
 
 const Hero = () => {
   return (
@@ -8,14 +8,14 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-slate-900">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjEpIi8+Cjwvc3ZnPg==')] opacity-20"></div>
         
-        {/* Blended Jellyfish */}
-        <div className="absolute top-20 right-10 w-64 h-96 opacity-30 pointer-events-none animate-float-gentle">
+        {/* Blended Octopus */}
+        <div className="absolute top-20 right-10 w-64 h-96 opacity-40 pointer-events-none animate-float-gentle">
           <img 
-            src={jellyfishImage} 
+            src={octopusImage} 
             alt=""
-            className="w-full h-full object-contain mix-blend-screen animate-drift"
+            className="w-full h-full object-contain mix-blend-soft-light animate-drift"
             style={{
-              filter: 'blur(1px) brightness(0.8) contrast(1.2) saturate(1.5)',
+              filter: 'brightness(0.9) contrast(1.3) saturate(1.2) hue-rotate(15deg)',
             }}
           />
         </div>

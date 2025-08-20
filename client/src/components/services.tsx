@@ -1,17 +1,17 @@
 import { BarChart3, Smartphone, Cloud, Lightbulb } from "lucide-react";
-import octopusImage from "@assets/download (10)_1755719298952.jpg";
+import octopusImage from "@assets/download__10_-removebg-preview_1755719654422.png";
 
 const Services = () => {
   return (
     <section id="services" className="py-16 lg:py-24 bg-gradient-to-br from-black via-gray-900 to-slate-900 relative overflow-hidden" data-testid="services-section">
       {/* Blended Octopus */}
-      <div className="absolute bottom-0 left-0 w-72 h-96 opacity-20 pointer-events-none animate-float-gentle">
+      <div className="absolute bottom-0 left-0 w-72 h-96 opacity-25 pointer-events-none animate-float-gentle">
         <img 
           src={octopusImage} 
           alt=""
-          className="w-full h-full object-contain mix-blend-soft-light animate-drift"
+          className="w-full h-full object-contain mix-blend-overlay animate-drift"
           style={{
-            filter: 'blur(2px) brightness(0.6) contrast(1.5) hue-rotate(15deg)',
+            filter: 'brightness(0.7) contrast(1.4) hue-rotate(45deg) saturate(1.3)',
             transform: 'rotate(-15deg) scale(1.2)'
           }}
         />

@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
-import octopusImage from "@assets/download (10)_1755719298952.jpg";
+import octopusImage from "@assets/download__10_-removebg-preview_1755719654422.png";
 
 interface ContactFormData {
   name: string;
@@ -64,13 +64,13 @@ const Contact = () => {
   return (
     <section id="contact" className="py-16 lg:py-24 bg-gradient-to-br from-black via-gray-900 to-slate-900 relative overflow-hidden" data-testid="contact-section">
       {/* Blended Octopus - Mirrored */}
-      <div className="absolute top-16 right-0 w-64 h-80 opacity-15 pointer-events-none animate-float-gentle">
+      <div className="absolute top-16 right-0 w-64 h-80 opacity-20 pointer-events-none animate-float-gentle">
         <img 
           src={octopusImage} 
           alt=""
-          className="w-full h-full object-contain mix-blend-luminosity animate-drift"
+          className="w-full h-full object-contain mix-blend-soft-light animate-drift"
           style={{
-            filter: 'blur(2px) brightness(0.5) contrast(2) hue-rotate(30deg)',
+            filter: 'brightness(0.7) contrast(1.8) hue-rotate(60deg) saturate(1.1)',
             transform: 'scaleX(-1) rotate(20deg) scale(1.1)',
             animationDelay: '4s'
           }}
