@@ -1,5 +1,4 @@
 import { Building2, CheckCircle, Cloud, Zap } from "lucide-react";
-import octopusImage from "@assets/download__10_-removebg-preview_1755719654422.png";
 
 const Hero = () => {
   return (
@@ -8,24 +7,12 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-slate-900">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjEpIi8+Cjwvc3ZnPg==')] opacity-20"></div>
         
-        {/* Blended Octopus */}
-        <div className="absolute top-20 right-10 w-64 h-96 opacity-40 pointer-events-none animate-float-gentle">
-          <img 
-            src={octopusImage} 
-            alt=""
-            className="w-full h-full object-contain mix-blend-soft-light animate-drift"
-            style={{
-              filter: 'brightness(0.9) contrast(1.3) saturate(1.2) hue-rotate(15deg)',
-            }}
-          />
-        </div>
-        
         {/* Floating particles */}
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
             <div
               key={i}
-              className="absolute w-1 h-1 bg-blue-400 rounded-full opacity-40 animate-pulse"
+              className="absolute w-1 h-1 bg-white rounded-full opacity-30 animate-pulse"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,

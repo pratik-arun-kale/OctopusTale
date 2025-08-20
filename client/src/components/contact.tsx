@@ -6,7 +6,6 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
-import octopusImage from "@assets/download__10_-removebg-preview_1755719654422.png";
 
 interface ContactFormData {
   name: string;
@@ -62,22 +61,8 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 lg:py-24 bg-gradient-to-br from-black via-gray-900 to-slate-900 relative overflow-hidden" data-testid="contact-section">
-      {/* Blended Octopus - Mirrored */}
-      <div className="absolute top-16 right-0 w-64 h-80 opacity-20 pointer-events-none animate-float-gentle">
-        <img 
-          src={octopusImage} 
-          alt=""
-          className="w-full h-full object-contain mix-blend-soft-light animate-drift"
-          style={{
-            filter: 'brightness(0.7) contrast(1.8) hue-rotate(60deg) saturate(1.1)',
-            transform: 'scaleX(-1) rotate(20deg) scale(1.1)',
-            animationDelay: '4s'
-          }}
-        />
-      </div>
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="contact" className="py-16 lg:py-24 bg-gradient-to-br from-black via-gray-900 to-slate-900 relative" data-testid="contact-section">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" data-testid="contact-title">Get In Touch</h2>
           <p className="text-lg text-gray-300" data-testid="contact-subtitle">Ready to transform your sports technology? Let's talk.</p>

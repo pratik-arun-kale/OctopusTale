@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import octopusImage from "@assets/download__10_-removebg-preview_1755719654422.png";
 
 const Projects = () => {
   const projects = [
@@ -42,22 +41,8 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-16 lg:py-24 bg-gradient-to-br from-black via-gray-900 to-slate-900 relative overflow-hidden" data-testid="projects-section">
-      {/* Blended Octopus - Different Position */}
-      <div className="absolute top-32 right-20 w-48 h-64 opacity-30 pointer-events-none animate-float-gentle">
-        <img 
-          src={octopusImage} 
-          alt=""
-          className="w-full h-full object-contain mix-blend-screen animate-drift"
-          style={{
-            filter: 'brightness(0.8) contrast(1.3) saturate(1.4) hue-rotate(-30deg)',
-            transform: 'rotate(45deg) scaleX(-1)',
-            animationDelay: '2s'
-          }}
-        />
-      </div>
-      
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="projects" className="py-16 lg:py-24 bg-gradient-to-br from-black via-gray-900 to-slate-900 relative" data-testid="projects-section">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" data-testid="projects-title">Our Projects</h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto" data-testid="projects-subtitle">
