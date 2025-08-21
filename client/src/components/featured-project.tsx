@@ -199,13 +199,13 @@ const FeaturedProject = () => {
                 onClick={() => goToSlide(index)}
                 className={`rounded-full transition-all duration-300 touch-manipulation ${
                   currentSlide === index 
-                    ? 'bg-blue-500 scale-110' 
+                    ? 'bg-blue-500 scale-105' 
                     : 'bg-white/30 hover:bg-white/50'
                 }`}
                 data-testid={`carousel-dot-${index}`}
                 style={{ 
-                  width: '6px', 
-                  height: '6px',
+                  width: '2px', 
+                  height: '2px',
                   minHeight: '44px', 
                   minWidth: '44px' 
                 }}
