@@ -41,29 +41,8 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-16 lg:py-24 relative overflow-hidden" data-testid="projects-section">
-      {/* Animated Background - same as hero */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-slate-900">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjEpIi8+Cjwvc3ZnPg==')] opacity-20"></div>
-        
-        {/* Floating particles */}
-        <div className="absolute inset-0">
-          {[...Array(18)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-1 bg-white rounded-full opacity-30 animate-pulse"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${2 + Math.random() * 3}s`
-              }}
-            />
-          ))}
-        </div>
-      </div>
-
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-16 lg:py-24" data-testid="projects-section">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" data-testid="projects-title">Our Projects</h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto" data-testid="projects-subtitle">
