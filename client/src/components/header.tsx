@@ -43,6 +43,13 @@ const Header = () => {
                 Service
               </button>
               <button 
+                onClick={() => scrollToSection("featured-projects")} 
+                className="text-gray-200 hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors"
+                data-testid="nav-case-studies"
+              >
+                Case Studies
+              </button>
+              <button 
                 onClick={() => scrollToSection("about")} 
                 className="text-gray-200 hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors"
                 data-testid="nav-about"
@@ -94,6 +101,13 @@ const Header = () => {
                 data-testid="mobile-nav-services"
               >
                 Service
+              </button>
+              <button 
+                onClick={() => scrollToSection("featured-projects")} 
+                className="text-gray-200 hover:text-blue-300 block px-3 py-2 text-base font-medium w-full text-left"
+                data-testid="mobile-nav-case-studies"
+              >
+                Case Studies
               </button>
               <button 
                 onClick={() => scrollToSection("about")} 
