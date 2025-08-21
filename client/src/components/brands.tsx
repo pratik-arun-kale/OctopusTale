@@ -39,7 +39,11 @@ const Brands = () => {
                 <img
                   src={brand.logo}
                   alt={brand.name}
-                  className="max-h-16 max-w-full object-contain filter brightness-75 hover:brightness-100 transition-all duration-300"
+                  className="max-h-16 max-w-full object-contain transition-all duration-300"
+                  style={{
+                    filter: 'invert(1) brightness(0.8) contrast(1.2)',
+                    mixBlendMode: 'multiply'
+                  }}
                 />
               ) : (
                 <span className="text-2xl lg:text-3xl font-semibold text-gray-400 hover:text-white transition-colors duration-300">
@@ -59,7 +63,11 @@ const Brands = () => {
                 <img
                   src={brand.logo}
                   alt={brand.name}
-                  className="max-h-16 max-w-full object-contain filter brightness-75 hover:brightness-100 transition-all duration-300"
+                  className="max-h-16 max-w-full object-contain transition-all duration-300"
+                  style={{
+                    filter: 'invert(1) brightness(0.8) contrast(1.2)',
+                    mixBlendMode: 'multiply'
+                  }}
                 />
               ) : (
                 <span className="text-2xl lg:text-3xl font-semibold text-gray-400 hover:text-white transition-colors duration-300">
