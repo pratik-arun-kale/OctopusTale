@@ -197,13 +197,18 @@ const FeaturedProject = () => {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-0.5 h-0.5 md:w-0.5 md:h-0.5 rounded-full transition-all duration-300 touch-manipulation ${
+                className={`rounded-full transition-all duration-300 touch-manipulation ${
                   currentSlide === index 
                     ? 'bg-blue-500 scale-110' 
                     : 'bg-white/30 hover:bg-white/50'
                 }`}
                 data-testid={`carousel-dot-${index}`}
-                style={{ minHeight: '44px', minWidth: '44px' }} // Better touch target for mobile
+                style={{ 
+                  width: '6px', 
+                  height: '6px',
+                  minHeight: '44px', 
+                  minWidth: '44px' 
+                }}
               />
             ))}
           </div>
