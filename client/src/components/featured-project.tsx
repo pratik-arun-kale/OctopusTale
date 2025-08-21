@@ -204,8 +204,8 @@ const FeaturedProject = () => {
                 }`}
                 data-testid={`carousel-dot-${index}`}
                 style={{ 
-                  width: '2px', 
-                  height: '2px',
+                  width: '1px', 
+                  height: '1px',
                   minHeight: '44px', 
                   minWidth: '44px' 
                 }}
