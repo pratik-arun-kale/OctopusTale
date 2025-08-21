@@ -1,4 +1,4 @@
-import { BarChart3, Smartphone, Cloud, Lightbulb, Brain, Settings, Gamepad2, Database, CircuitBoard, Layers } from "lucide-react";
+import { BarChart3, Smartphone, Cloud, Lightbulb, Brain, Settings, Gamepad2, Database, CircuitBoard, Layers, Users, Code, DollarSign, Zap } from "lucide-react";
 
 const Services = () => {
   return (
@@ -30,17 +30,17 @@ const Services = () => {
           {/* Grid of smaller service cards - spans 4 columns */}
           <div className="lg:col-span-4 grid grid-cols-2 md:grid-cols-4 gap-4">
             {/* Top Row */}
-            <div className="text-center group" data-testid="service-developer-tools">
+            <div className="text-center group" data-testid="service-fan-engagement">
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]">
-                <Settings className="w-8 h-8 text-white mb-3" />
-                <h4 className="text-sm font-medium text-white">Developer Tools</h4>
+                <Users className="w-8 h-8 text-white mb-3" />
+                <h4 className="text-sm font-medium text-white">Fan Engagement</h4>
               </div>
             </div>
 
-            <div className="text-center group" data-testid="service-open-source">
+            <div className="text-center group" data-testid="service-full-stack">
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]">
-                <Layers className="w-8 h-8 text-white mb-3" />
-                <h4 className="text-sm font-medium text-white">Open Source</h4>
+                <Code className="w-8 h-8 text-white mb-3" />
+                <h4 className="text-sm font-medium text-white">Full Stack Developing</h4>
               </div>
             </div>
 
@@ -51,32 +51,32 @@ const Services = () => {
               </div>
             </div>
 
-            <div className="text-center group" data-testid="service-cloud">
+            <div className="text-center group" data-testid="service-betting-solution">
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]">
-                <Cloud className="w-8 h-8 text-white mb-3" />
-                <h4 className="text-sm font-medium text-white">Cloud</h4>
+                <DollarSign className="w-8 h-8 text-white mb-3" />
+                <h4 className="text-sm font-medium text-white">Betting Solution</h4>
               </div>
             </div>
 
             {/* Bottom Row */}
-            <div className="text-center group" data-testid="service-ai-pc">
+            <div className="text-center group" data-testid="service-ai-solution">
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]">
-                <CircuitBoard className="w-8 h-8 text-white mb-3" />
-                <h4 className="text-sm font-medium text-white">AI PC</h4>
+                <Brain className="w-8 h-8 text-white mb-3" />
+                <h4 className="text-sm font-medium text-white">AI Solution</h4>
               </div>
             </div>
 
-            <div className="text-center group" data-testid="service-edge">
+            <div className="text-center group" data-testid="service-cloud-solutions">
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]">
-                <Database className="w-8 h-8 text-white mb-3" />
-                <h4 className="text-sm font-medium text-white">Edge</h4>
+                <Cloud className="w-8 h-8 text-white mb-3" />
+                <h4 className="text-sm font-medium text-white">Cloud Solutions</h4>
               </div>
             </div>
 
-            <div className="text-center group" data-testid="service-hpc">
+            <div className="text-center group" data-testid="service-automation">
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]">
-                <BarChart3 className="w-8 h-8 text-white mb-3" />
-                <h4 className="text-sm font-medium text-white">HPC</h4>
+                <Zap className="w-8 h-8 text-white mb-3" />
+                <h4 className="text-sm font-medium text-white">Automation</h4>
               </div>
             </div>
 
