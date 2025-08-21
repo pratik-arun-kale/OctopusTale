@@ -192,12 +192,12 @@ const FeaturedProject = () => {
           </button>
 
           {/* Dots Navigation - Enhanced for mobile */}
-          <div className="flex justify-center mt-6 space-x-3">
+          <div className="flex justify-center mt-6 space-x-2">
             {projects.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 md:w-3 md:h-3 rounded-full transition-all duration-300 touch-manipulation ${
+                className={`w-2 h-2 md:w-2 md:h-2 rounded-full transition-all duration-300 touch-manipulation ${
                   currentSlide === index 
                     ? 'bg-blue-500 scale-110' 
                     : 'bg-white/30 hover:bg-white/50'
