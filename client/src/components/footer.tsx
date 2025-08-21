@@ -74,11 +74,11 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection("projects")} 
+                  onClick={() => scrollToSection("featured-projects")} 
                   className="hover:text-white transition-colors"
                   data-testid="footer-link-projects"
                 >
-                  Projects
+                  Featured Projects
                 </button>
               </li>
               <li>
