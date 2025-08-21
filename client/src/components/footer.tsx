@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white relative" data-testid="footer">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
+        <div className="backdrop-blur-sm border border-white/10 rounded-3xl p-8" style={{ backgroundColor: '#17161A' }}>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
               <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent" data-testid="footer-logo">Tales</h3>

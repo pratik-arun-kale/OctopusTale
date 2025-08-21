@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className="min-h-screen relative overflow-hidden" data-testid="about-page">
       {/* Unified Background matching homepage */}
-      <div className="fixed inset-0 bg-gradient-to-br from-black via-gray-900 to-slate-900">
+      <div className="fixed inset-0" style={{ backgroundColor: '#040404' }}>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjEpIi8+Cjwvc3ZnPg==')] opacity-20"></div>
         
         {/* Floating particles */}
@@ -53,7 +53,7 @@ const About = () => {
       {/* Our Edge Section */}
       <section className="py-16" data-testid="our-edge">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8 lg:p-12">
+          <div className="backdrop-blur-sm border border-white/20 rounded-3xl p-8 lg:p-12" style={{ backgroundColor: '#17161A' }}>
             <h3 className="text-3xl font-bold text-white mb-8 text-center">Our Edge</h3>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
@@ -85,7 +85,7 @@ const About = () => {
       {/* Services Sections */}
       <section id="fan-engagement" className="py-16" data-testid="fan-engagement-section">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8 lg:p-12">
+          <div className="backdrop-blur-sm border border-white/20 rounded-3xl p-8 lg:p-12" style={{ backgroundColor: '#17161A' }}>
             <div className="flex items-center mb-8">
               <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mr-6">
                 <Users className="w-8 h-8 text-blue-300" />
@@ -121,7 +121,7 @@ const About = () => {
 
       <section id="full-stack-development" className="py-16" data-testid="full-stack-section">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8 lg:p-12">
+          <div className="backdrop-blur-sm border border-white/20 rounded-3xl p-8 lg:p-12" style={{ backgroundColor: '#17161A' }}>
             <div className="flex items-center mb-8">
               <div className="w-16 h-16 bg-emerald-500/20 rounded-xl flex items-center justify-center mr-6">
                 <Code className="w-8 h-8 text-emerald-300" />
@@ -157,7 +157,7 @@ const About = () => {
 
       <section id="gaming" className="py-16" data-testid="gaming-section">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8 lg:p-12">
+          <div className="backdrop-blur-sm border border-white/20 rounded-3xl p-8 lg:p-12" style={{ backgroundColor: '#17161A' }}>
             <div className="flex items-center mb-8">
               <div className="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center mr-6">
                 <Gamepad2 className="w-8 h-8 text-purple-300" />
@@ -192,7 +192,7 @@ const About = () => {
 
       <section id="betting-solutions" className="py-16" data-testid="betting-solutions-section">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8 lg:p-12">
+          <div className="backdrop-blur-sm border border-white/20 rounded-3xl p-8 lg:p-12" style={{ backgroundColor: '#17161A' }}>
             <div className="flex items-center mb-8">
               <div className="w-16 h-16 bg-yellow-500/20 rounded-xl flex items-center justify-center mr-6">
                 <DollarSign className="w-8 h-8 text-yellow-300" />
@@ -229,7 +229,7 @@ const About = () => {
 
       <section id="ai-solutions" className="py-16" data-testid="ai-solutions-section">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8 lg:p-12">
+          <div className="backdrop-blur-sm border border-white/20 rounded-3xl p-8 lg:p-12" style={{ backgroundColor: '#17161A' }}>
             <div className="flex items-center mb-8">
               <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mr-6">
                 <Brain className="w-8 h-8 text-blue-300" />
@@ -265,7 +265,7 @@ const About = () => {
 
       <section id="cloud-solutions" className="py-16" data-testid="cloud-solutions-section">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8 lg:p-12">
+          <div className="backdrop-blur-sm border border-white/20 rounded-3xl p-8 lg:p-12" style={{ backgroundColor: '#17161A' }}>
             <div className="flex items-center mb-8">
               <div className="w-16 h-16 bg-indigo-500/20 rounded-xl flex items-center justify-center mr-6">
                 <Cloud className="w-8 h-8 text-indigo-300" />
@@ -301,7 +301,7 @@ const About = () => {
 
       <section id="automation" className="py-16" data-testid="automation-section">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8 lg:p-12">
+          <div className="backdrop-blur-sm border border-white/20 rounded-3xl p-8 lg:p-12" style={{ backgroundColor: '#17161A' }}>
             <div className="flex items-center mb-8">
               <div className="w-16 h-16 bg-orange-500/20 rounded-xl flex items-center justify-center mr-6">
                 <Zap className="w-8 h-8 text-orange-300" />

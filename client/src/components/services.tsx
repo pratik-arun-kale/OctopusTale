@@ -24,7 +24,7 @@ const Services = () => {
         <div className="grid lg:grid-cols-6 gap-4">
           {/* Sport Tech Featured Card - spans 2 columns */}
           <div className="lg:col-span-2" data-testid="featured-sport-tech-card">
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-3xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col justify-between min-h-[320px]">
+            <div className="backdrop-blur-sm border border-white/20 p-8 rounded-3xl transition-all duration-300 h-full flex flex-col justify-between min-h-[320px]" style={{ backgroundColor: '#17161A' }}>
               <div>
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500/30 to-blue-500/30 rounded-2xl flex items-center justify-center mb-6">
                   <Gamepad2 className="w-8 h-8 text-white" />
@@ -36,7 +36,7 @@ const Services = () => {
               </div>
               <button 
                 onClick={() => navigateToAboutSection("fan-engagement")}
-                className="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/30 transition-all duration-300 self-start"
+                className="backdrop-blur-sm border border-white/30 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 self-start" style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}
               >
                 Explore
               </button>
@@ -47,28 +47,28 @@ const Services = () => {
           <div className="lg:col-span-4 grid grid-cols-2 md:grid-cols-4 gap-4">
             {/* Top Row */}
             <div className="text-center group cursor-pointer" data-testid="service-fan-engagement" onClick={() => navigateToAboutSection("fan-engagement")}>
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]">
+              <div className="backdrop-blur-sm border border-white/20 p-6 rounded-2xl transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]" style={{ backgroundColor: '#17161A' }}>
                 <Users className="w-8 h-8 text-white mb-3" />
                 <h4 className="text-sm font-medium text-white">Fan Engagement</h4>
               </div>
             </div>
 
             <div className="text-center group cursor-pointer" data-testid="service-full-stack" onClick={() => navigateToAboutSection("full-stack-development")}>
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]">
+              <div className="backdrop-blur-sm border border-white/20 p-6 rounded-2xl transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]" style={{ backgroundColor: '#17161A' }}>
                 <Code className="w-8 h-8 text-white mb-3" />
                 <h4 className="text-sm font-medium text-white">Full Stack Developing</h4>
               </div>
             </div>
 
             <div className="text-center group cursor-pointer" data-testid="service-gaming" onClick={() => navigateToAboutSection("gaming")}>
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]">
+              <div className="backdrop-blur-sm border border-white/20 p-6 rounded-2xl transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]" style={{ backgroundColor: '#17161A' }}>
                 <Gamepad2 className="w-8 h-8 text-white mb-3" />
                 <h4 className="text-sm font-medium text-white">Gaming</h4>
               </div>
             </div>
 
             <div className="text-center group cursor-pointer" data-testid="service-betting-solution" onClick={() => navigateToAboutSection("betting-solutions")}>
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]">
+              <div className="backdrop-blur-sm border border-white/20 p-6 rounded-2xl transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]" style={{ backgroundColor: '#17161A' }}>
                 <DollarSign className="w-8 h-8 text-white mb-3" />
                 <h4 className="text-sm font-medium text-white">Betting Solution</h4>
               </div>
@@ -76,28 +76,28 @@ const Services = () => {
 
             {/* Bottom Row */}
             <div className="text-center group cursor-pointer" data-testid="service-ai-solution" onClick={() => navigateToAboutSection("ai-solutions")}>
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]">
+              <div className="backdrop-blur-sm border border-white/20 p-6 rounded-2xl transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]" style={{ backgroundColor: '#17161A' }}>
                 <Brain className="w-8 h-8 text-white mb-3" />
                 <h4 className="text-sm font-medium text-white">AI Solution</h4>
               </div>
             </div>
 
             <div className="text-center group cursor-pointer" data-testid="service-cloud-solutions" onClick={() => navigateToAboutSection("cloud-solutions")}>
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]">
+              <div className="backdrop-blur-sm border border-white/20 p-6 rounded-2xl transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]" style={{ backgroundColor: '#17161A' }}>
                 <Cloud className="w-8 h-8 text-white mb-3" />
                 <h4 className="text-sm font-medium text-white">Cloud Solutions</h4>
               </div>
             </div>
 
             <div className="text-center group cursor-pointer" data-testid="service-automation" onClick={() => navigateToAboutSection("automation")}>
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]">
+              <div className="backdrop-blur-sm border border-white/20 p-6 rounded-2xl transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]" style={{ backgroundColor: '#17161A' }}>
                 <Zap className="w-8 h-8 text-white mb-3" />
                 <h4 className="text-sm font-medium text-white">Automation</h4>
               </div>
             </div>
 
             <div className="text-center group" data-testid="service-explore-all">
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]">
+              <div className="backdrop-blur-sm border border-white/20 p-6 rounded-2xl transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]" style={{ backgroundColor: '#17161A' }}>
                 <Lightbulb className="w-8 h-8 text-white mb-3" />
                 <h4 className="text-sm font-medium text-white">Explore All</h4>
               </div>
