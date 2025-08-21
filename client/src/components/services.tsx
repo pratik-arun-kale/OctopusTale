@@ -9,39 +9,39 @@ const Services = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="text-center group" data-testid="service-1">
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-2xl hover:bg-white/20 hover:scale-105 transition-all duration-300">
+          <div className="text-center group h-full" data-testid="service-1">
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-2xl hover:bg-white/20 hover:scale-105 transition-all duration-300 h-full flex flex-col">
               <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 mx-auto">
                 <BarChart3 className="w-8 h-8 text-blue-300" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Digital Transformation Solutions</h3>
+              <h3 className="text-lg font-semibold text-white mb-2 min-h-[3.5rem] flex items-center justify-center">Digital Transformation Solutions</h3>
             </div>
           </div>
           
-          <div className="text-center group" data-testid="service-2">
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-2xl hover:bg-white/20 hover:scale-105 transition-all duration-300">
+          <div className="text-center group h-full" data-testid="service-2">
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-2xl hover:bg-white/20 hover:scale-105 transition-all duration-300 h-full flex flex-col">
               <div className="w-16 h-16 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-6 mx-auto">
                 <Smartphone className="w-8 h-8 text-emerald-300" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Sports App Development</h3>
+              <h3 className="text-lg font-semibold text-white mb-2 min-h-[3.5rem] flex items-center justify-center">Sports App Development</h3>
             </div>
           </div>
           
-          <div className="text-center group" data-testid="service-3">
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-2xl hover:bg-white/20 hover:scale-105 transition-all duration-300">
+          <div className="text-center group h-full" data-testid="service-3">
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-2xl hover:bg-white/20 hover:scale-105 transition-all duration-300 h-full flex flex-col">
               <div className="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 mx-auto">
                 <Cloud className="w-8 h-8 text-purple-300" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Custom Software & Cloud Solutions</h3>
+              <h3 className="text-lg font-semibold text-white mb-2 min-h-[3.5rem] flex items-center justify-center">Custom Software & Cloud Solutions</h3>
             </div>
           </div>
           
-          <div className="text-center group" data-testid="service-4">
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-2xl hover:bg-white/20 hover:scale-105 transition-all duration-300">
+          <div className="text-center group h-full" data-testid="service-4">
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-2xl hover:bg-white/20 hover:scale-105 transition-all duration-300 h-full flex flex-col">
               <div className="w-16 h-16 bg-yellow-500/20 rounded-xl flex items-center justify-center mb-6 mx-auto">
                 <Lightbulb className="w-8 h-8 text-yellow-300" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">AI & Data Analytics</h3>
+              <h3 className="text-lg font-semibold text-white mb-2 min-h-[3.5rem] flex items-center justify-center">AI & Data Analytics</h3>
             </div>
           </div>
         </div>
