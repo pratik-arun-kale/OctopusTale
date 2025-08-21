@@ -10,43 +10,65 @@ const FeaturedProject = () => {
 
   return (
     <section className="py-16 lg:py-24" data-testid="featured-project-section">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-left mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-2" data-testid="featured-title">Featured Projects</h2>
-          <p className="text-gray-300" data-testid="featured-subtitle">Case Studies</p>
+          <p className="text-gray-400" data-testid="featured-subtitle">Case Studies</p>
           <button 
             onClick={scrollToProjects}
-            className="inline-block mt-4 text-blue-300 hover:text-white font-medium transition-colors"
+            className="inline-block mt-4 text-blue-400 hover:text-white font-medium transition-colors"
             data-testid="link-more-studies"
           >
             See more case studies →
           </button>
         </div>
         
-        <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-2xl overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4 hover:bg-white/20 transition-all duration-300" data-testid="featured-project-card">
-          {/* Project mockup image */}
-          <div className="h-64 lg:h-auto bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-            <img 
-              src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-              alt="Mobile sports app interface" 
-              className="w-full h-full object-cover" 
-              data-testid="featured-project-image"
-            />
-          </div>
-          
-          <div className="p-8 lg:p-12">
-            <h3 className="text-2xl font-bold text-white mb-4" data-testid="featured-project-title">
-              FanConnect – Live Sports Engagement App
-            </h3>
-            <p className="text-gray-300 mb-6 leading-relaxed" data-testid="featured-project-description">
-              A mobile app delivering real-time scores, live commentary, and interactive polls, increasing fan engagement by 65% for a major cricket league.
-            </p>
-            <Button 
-              className="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/30 hover:scale-105 transition-all duration-300"
-              data-testid="button-read-more"
-            >
-              Read More
-            </Button>
+        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl overflow-hidden hover:bg-white/10 transition-all duration-300" data-testid="featured-project-card">
+          <div className="grid lg:grid-cols-2 gap-0">
+            {/* Left: Content */}
+            <div className="p-8 lg:p-12 flex flex-col justify-center">
+              <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6" data-testid="featured-project-title">
+                AI-Powered Sports Analytics Platform
+              </h3>
+              <p className="text-gray-300 mb-8 leading-relaxed text-lg" data-testid="featured-project-description">
+                CAMB.AI partners with sports organizations to bring advanced AI models to performance analysis. Soon, you'll be able to experience real-time insights in your training, all powered by intelligent analytics.
+              </p>
+              
+              {/* Decorative wave element */}
+              <div className="mb-8">
+                <svg width="100" height="40" viewBox="0 0 100 40" fill="none" className="opacity-30">
+                  <path d="M0 20 Q25 0 50 20 T100 20" stroke="url(#gradient)" strokeWidth="2" fill="none"/>
+                  <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#3B82F6"/>
+                      <stop offset="100%" stopColor="#8B5CF6"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+
+              {/* Testimonial Quote */}
+              <div className="bg-black/40 border border-white/10 rounded-2xl p-6">
+                <blockquote className="text-gray-200 italic mb-4">
+                  "We are a generation apart, and growing up in sports technology. Thirty years apart, we encountered the same performance challenges."
+                </blockquote>
+                <div className="text-sm">
+                  <p className="text-gray-400 font-medium">Alex Rodriguez, Chief Technology Officer, SportsTech Pro</p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Right: Image */}
+            <div className="relative h-64 lg:h-auto min-h-[400px]">
+              <img 
+                src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&h=600" 
+                alt="Sports analytics dashboard interface" 
+                className="w-full h-full object-cover" 
+                data-testid="featured-project-image"
+              />
+              {/* Overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent to-black/20"></div>
+            </div>
           </div>
         </div>
       </div>
