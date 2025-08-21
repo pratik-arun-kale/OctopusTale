@@ -2,16 +2,16 @@
 
 ## Overview
 
-This is a full-stack web application for Tales, a sports technology company that develops cutting-edge software solutions merging sports, technology, and AI. The platform serves as a company portfolio and contact system, showcasing their digital transformation services, sports app development capabilities, and project case studies. Built with modern web technologies, it features a React frontend with shadcn/ui components and an Express.js backend with PostgreSQL database integration.
+This is a full-stack web application for Tales, a sports technology company that develops cutting-edge software solutions merging sports, technology, and AI. The platform serves as a comprehensive company portfolio showcasing their expertise in fan engagement, full-stack development, gaming, betting solutions, AI solutions, cloud solutions, and automation. The multi-page application features detailed service information, case studies carousel, and integrated contact system. Built with modern web technologies, it features a React frontend with shadcn/ui components, wouter routing, and an Express.js backend with PostgreSQL database integration.
 
 ## Recent Changes (August 21, 2025)
 
-- **Major Restructuring**: Removed "Our Projects" section completely
-- **New Featured Projects Carousel**: Implemented horizontal auto-sliding carousel with infinite loop
-- **Enhanced Case Studies**: Moved existing case studies content into carousel format with preserved card layout
-- **Mobile-First Navigation**: Added touch/swipe support for mobile devices with responsive controls
-- **Smart Auto-Play**: 5-second intervals with auto-pause on user interaction, resumes after 10 seconds
-- **Updated Links**: All internal navigation links now point to `/featured-projects` section
+- **About Us Page Created**: Complete new page with comprehensive business information and service details
+- **Service Card Integration**: "What We Do" section now links directly to About page sections with anchor navigation
+- **Updated Service Categories**: Business-focused solutions (Fan Engagement, Full Stack Developing, Gaming, Betting Solution, AI Solution, Cloud Solutions, Automation)
+- **Sport Tech Featured Card**: Changed from "AI" to "Sport Tech" with 2-column width matching reference design
+- **Cross-Page Navigation**: Header now properly routes between Home and About pages with section scrolling
+- **Consistent Design Language**: About page maintains same glassmorphism and Apple-like minimalist aesthetics
 
 ## User Preferences
 

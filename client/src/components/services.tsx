@@ -1,6 +1,19 @@
 import { BarChart3, Smartphone, Cloud, Lightbulb, Brain, Settings, Gamepad2, Database, CircuitBoard, Layers, Users, Code, DollarSign, Zap } from "lucide-react";
+import { useLocation } from "wouter";
 
 const Services = () => {
+  const [location, setLocation] = useLocation();
+
+  const navigateToAboutSection = (sectionId: string) => {
+    setLocation("/about");
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
+
   return (
     <section id="services" className="py-16 lg:py-24" data-testid="services-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,7 +34,10 @@ const Services = () => {
                   Development tools and resources help you prepare, build, deploy, and scale your sports technology solutions.
                 </p>
               </div>
-              <button className="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/30 transition-all duration-300 self-start">
+              <button 
+                onClick={() => navigateToAboutSection("fan-engagement")}
+                className="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/30 transition-all duration-300 self-start"
+              >
                 Explore
               </button>
             </div>
@@ -30,28 +46,28 @@ const Services = () => {
           {/* Grid of smaller service cards - spans 4 columns */}
           <div className="lg:col-span-4 grid grid-cols-2 md:grid-cols-4 gap-4">
             {/* Top Row */}
-            <div className="text-center group" data-testid="service-fan-engagement">
+            <div className="text-center group cursor-pointer" data-testid="service-fan-engagement" onClick={() => navigateToAboutSection("fan-engagement")}>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]">
                 <Users className="w-8 h-8 text-white mb-3" />
                 <h4 className="text-sm font-medium text-white">Fan Engagement</h4>
               </div>
             </div>
 
-            <div className="text-center group" data-testid="service-full-stack">
+            <div className="text-center group cursor-pointer" data-testid="service-full-stack" onClick={() => navigateToAboutSection("full-stack-development")}>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]">
                 <Code className="w-8 h-8 text-white mb-3" />
                 <h4 className="text-sm font-medium text-white">Full Stack Developing</h4>
               </div>
             </div>
 
-            <div className="text-center group" data-testid="service-gaming">
+            <div className="text-center group cursor-pointer" data-testid="service-gaming" onClick={() => navigateToAboutSection("gaming")}>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]">
                 <Gamepad2 className="w-8 h-8 text-white mb-3" />
                 <h4 className="text-sm font-medium text-white">Gaming</h4>
               </div>
             </div>
 
-            <div className="text-center group" data-testid="service-betting-solution">
+            <div className="text-center group cursor-pointer" data-testid="service-betting-solution" onClick={() => navigateToAboutSection("betting-solutions")}>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]">
                 <DollarSign className="w-8 h-8 text-white mb-3" />
                 <h4 className="text-sm font-medium text-white">Betting Solution</h4>
@@ -59,21 +75,21 @@ const Services = () => {
             </div>
 
             {/* Bottom Row */}
-            <div className="text-center group" data-testid="service-ai-solution">
+            <div className="text-center group cursor-pointer" data-testid="service-ai-solution" onClick={() => navigateToAboutSection("ai-solutions")}>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]">
                 <Brain className="w-8 h-8 text-white mb-3" />
                 <h4 className="text-sm font-medium text-white">AI Solution</h4>
               </div>
             </div>
 
-            <div className="text-center group" data-testid="service-cloud-solutions">
+            <div className="text-center group cursor-pointer" data-testid="service-cloud-solutions" onClick={() => navigateToAboutSection("cloud-solutions")}>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]">
                 <Cloud className="w-8 h-8 text-white mb-3" />
                 <h4 className="text-sm font-medium text-white">Cloud Solutions</h4>
               </div>
             </div>
 
-            <div className="text-center group" data-testid="service-automation">
+            <div className="text-center group cursor-pointer" data-testid="service-automation" onClick={() => navigateToAboutSection("automation")}>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[140px]">
                 <Zap className="w-8 h-8 text-white mb-3" />
                 <h4 className="text-sm font-medium text-white">Automation</h4>

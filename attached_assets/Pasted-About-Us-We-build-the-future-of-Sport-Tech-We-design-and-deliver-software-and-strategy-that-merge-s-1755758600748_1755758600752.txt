@@ -1,0 +1,187 @@
+About Us
+We build the future of Sport Tech
+
+We design and deliver software and strategy that merge sports, technology, and AI into powerful digital products. From live fan experiences to regulated betting platforms, we help leagues, teams, and sports businesses modernize operations, activate audiences, and make smarter, faster decisions—end to end.
+
+Our edge
+
+Deep domain + full stack: product strategy, UX, data, AI/ML, cloud, and SRE—under one roof.
+
+Real-time by default: event-driven architectures built for live sports latency, scale, and resilience.
+
+Secure & compliant: privacy, KYC/AML, and responsible-gaming controls baked in from day one.
+
+Explore
+
+Fan Engagement
+
+Full-Stack Development
+
+Gaming
+
+Betting Solutions
+
+AI Solutions
+
+Cloud Solutions
+
+Automation
+
+Fan Engagement {#fan-engagement}
+
+What it is
+Tools and experiences that turn casual viewers into loyal fans across web, mobile, and venues.
+
+Tech we use
+Real-time APIs & websockets, push notifications, CDP integrations, GraphQL, Next.js/React Native, in-app wallets, gamification engines, analytics pipelines (Kafka/Stream processing), A/B testing frameworks.
+
+How we help
+
+Build interactive match centers (live stats, heatmaps, xG, win-probability, player trackers).
+
+Personalization engines: tailor content, offers, and rewards to each fan’s profile and behavior.
+
+Social layers: polls, UGC contests, leaderboards, watch-parties, and referral loops.
+
+Ticketing, merch, and membership integrations for measurable revenue lift.
+
+Outcomes
+Higher DAU/MAU, longer session times, improved CAC:LTV, and incremental commerce conversion.
+
+Full-Stack Development {#full-stack-development}
+
+What it is
+Product design, frontend, backend, and data systems—shipped as reliable, maintainable software.
+
+Tech we use
+TypeScript/Node.js, Python/Go, React/Next.js, React Native/Flutter, PostgreSQL/Redis, Elastic, event buses (Kafka), microservices on Kubernetes/Serverless, CI/CD, IaC (Terraform), OpenAPI/GraphQL.
+
+How we help
+
+Design sprints → clickable prototypes → production-grade MVPs in weeks.
+
+API platforms for schedules, rosters, stats, media, commerce, and identity.
+
+Observability (logs/metrics/traces), feature flags, and canary releases for safe iteration.
+
+Performance budgets and accessibility baked into every build.
+
+Outcomes
+Faster time-to-market, lower total cost of ownership, and fewer production incidents.
+
+Gaming {#gaming}
+
+What it is
+Fantasy, predictor games, trivia, arcade mini-games, and skill experiences that grow daily engagement.
+
+Tech we use
+Authoring engines, state sync via websockets, matchmaking, physics libraries, anti-cheat, real-time leaderboards, scalable lobbies, rewards/points systems, and fraud detection.
+
+How we help
+
+Fantasy & predictor frameworks with custom scoring and live data feeds.
+
+Seasonal campaigns, quests, and loyalty economies tied to CRM/marketing tools.
+
+Cross-platform builds (web/mobile) with low-latency play and offline tolerance.
+
+Outcomes
+Stickier sessions, shareable moments, and sponsorship inventory with clear ROI.
+
+Betting Solutions {#betting-solutions}
+
+What it is
+Regulated sports betting and trading systems built for speed, integrity, and compliance.
+
+Tech we use
+Odds/feed integrations, pricing/risk engines, market making, low-latency streaming, CQRS + event sourcing, geofencing, KYC/AML, payments, anti-fraud, audit logging, and responsible-gaming controls.
+
+How we help
+
+Integrate multiple odds providers; reconcile markets and manage exposure in real time.
+
+Build betslip, cash-out, and in-play experiences targeting sub-second updates.
+
+Trading tools: hedging dashboards, limits, anomaly alerts, and settlement workflows.
+
+Compliance by design: identity verification, age checks, self-exclusion, and audit trails.
+
+Outcomes
+Higher handle with controlled risk, faster settlement, and regulator-ready reporting.
+
+Note: We partner with licensed operators and build to applicable regulatory requirements in your jurisdictions.
+
+AI Solutions {#ai-solutions}
+
+What it is
+Machine learning and LLMs that power predictions, personalization, automation, and insight.
+
+Tech we use
+Model ops (feature stores, CI/CD for ML), recommender systems, gradient boosting/NNs, computer vision (player/ball tracking, highlight detection), LLMs with RAG, moderation classifiers, forecasting, experimentation.
+
+How we help
+
+Predictive models: demand/attendance, churn, injury risk signals, dynamic pricing.
+
+Personalization: content and offer ranking, smart notifications, and journey orchestration.
+
+AI copilots: fan support chat, team ops assistants, and internal knowledge search.
+
+CV for highlights and moments: auto-clip, tag, and publish near real time.
+
+Outcomes
+Sharper decisions, happier users, and measurable revenue and cost improvements.
+
+Cloud Solutions {#cloud-solutions}
+
+What it is
+Secure, scalable infrastructure tailored to the bursty, real-time nature of sports.
+
+Tech we use
+AWS/Azure/GCP, serverless (Lambda/Functions), Kubernetes, CDNs, global edge, object storage, caching layers, data lakes/warehouses (BigQuery/Snowflake), SSO/Identity, SRE practices (SLOs/error budgets).
+
+How we help
+
+Architect for peak loads (derbies, finals) without over-provisioning on quiet days.
+
+Multi-region deployments, blue-green rollouts, and disaster recovery.
+
+Cost optimization with autoscaling, right-sizing, and observability-driven tuning.
+
+Zero-trust networking, secrets management, and compliance (e.g., SOC 2/ISO-aligned).
+
+Outcomes
+High availability under pressure, predictable costs, and strong security posture.
+
+Automation {#automation}
+
+What it is
+DevOps, data, and business workflow automation that removes manual toil.
+
+Tech we use
+CI/CD (GitHub Actions/GitLab), Infrastructure as Code, test automation, Airflow/Pipelines, dbt, ELT/ETL, message queues, RPA where appropriate, alerting/on-call automation.
+
+How we help
+
+One-click deploys, automated rollbacks, and quality gates across environments.
+
+Data ingestion from stats providers, wearables, POS, and apps into clean models.
+
+Back-office automations: content publishing, inventory sync, ticketing and CRM updates.
+
+Executive dashboards with live KPIs (engagement, revenue, uptime, risk).
+
+Outcomes
+Fewer errors, faster releases, lower ops burden, and teams focused on impact.
+
+How we work
+
+Discover – Align on goals, KPIs, and constraints; audit current stack.
+
+Architect – Design target state, data flows, and compliance plan.
+
+Build – Ship an MVP quickly; iterate with user feedback and A/B tests.
+
+Scale – Harden for peak traffic, observability, and SRE runbooks.
+
+Operate – Ongoing support, model monitoring, and roadmap co-ownership.
