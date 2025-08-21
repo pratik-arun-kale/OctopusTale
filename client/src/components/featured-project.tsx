@@ -197,7 +197,7 @@ const FeaturedProject = () => {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-2 h-2 md:w-2 md:h-2 rounded-full transition-all duration-300 touch-manipulation ${
+                className={`w-0.5 h-0.5 md:w-0.5 md:h-0.5 rounded-full transition-all duration-300 touch-manipulation ${
                   currentSlide === index 
                     ? 'bg-blue-500 scale-110' 
                     : 'bg-white/30 hover:bg-white/50'
