@@ -191,34 +191,7 @@ const FeaturedProject = () => {
             <ChevronRight className="w-5 h-5 text-white" />
           </button>
 
-          {/* Dots Navigation - Enhanced for mobile */}
-          <div className="flex justify-center mt-6 space-x-2">
-            {projects.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className="relative transition-all duration-300 touch-manipulation"
-                data-testid={`carousel-dot-${index}`}
-                style={{ 
-                  width: '44px', 
-                  height: '44px',
-                  padding: 0
-                }}
-              >
-                <div 
-                  className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full transition-all duration-300 ${
-                    currentSlide === index 
-                      ? 'bg-blue-500 scale-105' 
-                      : 'bg-white/30 hover:bg-white/50'
-                  }`}
-                  style={{
-                    width: '4px',
-                    height: '4px'
-                  }}
-                />
-              </button>
-            ))}
-          </div>
+
         </div>
       </div>
     </section>
