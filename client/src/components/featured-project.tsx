@@ -197,19 +197,26 @@ const FeaturedProject = () => {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`rounded-full transition-all duration-300 touch-manipulation ${
-                  currentSlide === index 
-                    ? 'bg-blue-500 scale-105' 
-                    : 'bg-white/30 hover:bg-white/50'
-                }`}
+                className="relative transition-all duration-300 touch-manipulation"
                 data-testid={`carousel-dot-${index}`}
                 style={{ 
-                  width: '1px', 
-                  height: '1px',
-                  minHeight: '44px', 
-                  minWidth: '44px' 
+                  width: '44px', 
+                  height: '44px',
+                  padding: 0
                 }}
-              />
+              >
+                <div 
+                  className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full transition-all duration-300 ${
+                    currentSlide === index 
+                      ? 'bg-blue-500 scale-105' 
+                      : 'bg-white/30 hover:bg-white/50'
+                  }`}
+                  style={{
+                    width: '4px',
+                    height: '4px'
+                  }}
+                />
+              </button>
             ))}
           </div>
         </div>
