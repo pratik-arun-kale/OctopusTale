@@ -2,7 +2,6 @@ import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Services from "@/components/services";
 import FeaturedProject from "@/components/featured-project";
-import About from "@/components/about";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 
@@ -40,7 +39,6 @@ const Home = () => {
         <Hero />
         <Services />
         <FeaturedProject />
-        <About />
         <Contact />
         <Footer />
       </div>
