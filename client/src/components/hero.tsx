@@ -2,8 +2,32 @@ import { Building2, CheckCircle, Cloud, Zap } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="home" className="pt-16" data-testid="hero-section">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+    <section id="home" className="pt-16 relative overflow-hidden" data-testid="hero-section">
+      {/* Animated Spherical Background */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="relative">
+          {/* Main glowing sphere */}
+          <div className="w-[600px] h-[600px] rounded-full opacity-40 animate-pulse-slow">
+            <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-500/30 via-purple-500/30 to-pink-500/30 animate-spin-slow blur-sm"></div>
+          </div>
+          
+          {/* Inner sphere with different gradient */}
+          <div className="absolute inset-8 rounded-full opacity-60">
+            <div className="w-full h-full rounded-full bg-gradient-to-tr from-purple-400/25 via-blue-400/25 to-emerald-400/25 animate-reverse-spin blur-xs"></div>
+          </div>
+          
+          {/* Core sphere */}
+          <div className="absolute inset-16 rounded-full opacity-80">
+            <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-300/20 via-purple-300/20 to-pink-300/20 animate-pulse-medium"></div>
+          </div>
+          
+          {/* Outer ring effect */}
+          <div className="absolute inset-0 rounded-full border border-blue-400/30 animate-ping-slow"></div>
+          <div className="absolute inset-4 rounded-full border border-purple-400/20 animate-ping-slower"></div>
+        </div>
+      </div>
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 relative z-10">
         {/* Animated Main Title */}
         <div className="text-center mb-16">
           <div className="overflow-hidden">
