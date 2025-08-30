@@ -1,4 +1,4 @@
-import { Building2, CheckCircle, Cloud, Zap } from "lucide-react";
+
 
 const Features = () => {
   return (
@@ -9,34 +9,30 @@ const Features = () => {
             Why Teams & Enterprises Choose Us
           </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-            <div className="backdrop-blur-sm p-6 rounded-xl border border-white/20 transition-all duration-300" style={{ backgroundColor: '#17161A' }} data-testid="feature-card-1">
-              <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <Building2 className="w-6 h-6 text-blue-300" />
-              </div>
-              <p className="text-gray-200 text-sm leading-relaxed">Industry-focused expertise in sports tech</p>
-            </div>
+          <div className="max-w-4xl mx-auto text-lg text-gray-300 leading-relaxed space-y-6">
+            <p>
+              Where passion meets precision, we stand as partners in progress.
+              With industry-rooted expertise in sports technology,
+              we turn challenges into breakthroughs, and data into destiny.
+            </p>
             
-            <div className="backdrop-blur-sm p-6 rounded-xl border border-white/20 transition-all duration-300" style={{ backgroundColor: '#17161A' }} data-testid="feature-card-2">
-              <div className="w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <CheckCircle className="w-6 h-6 text-emerald-300" />
-              </div>
-              <p className="text-gray-200 text-sm leading-relaxed">Proven track record in digital transformation projects</p>
-            </div>
+            <p>
+              Our legacy of digital transformation speaks louder than words—
+              stories of vision brought to life,
+              of clubs and enterprises leaping boldly into the future.
+            </p>
             
-            <div className="backdrop-blur-sm p-6 rounded-xl border border-white/20 transition-all duration-300" style={{ backgroundColor: '#17161A' }} data-testid="feature-card-3">
-              <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <Cloud className="w-6 h-6 text-purple-300" />
-              </div>
-              <p className="text-gray-200 text-sm leading-relaxed">Agile, scalable, and cloud-ready solutions</p>
-            </div>
+            <p>
+              Built on the strength of agility, scalability, and cloud-powered design,
+              our solutions grow as you grow,
+              keeping pace with the speed of sport itself.
+            </p>
             
-            <div className="backdrop-blur-sm p-6 rounded-xl border border-white/20 transition-all duration-300" style={{ backgroundColor: '#17161A' }} data-testid="feature-card-4">
-              <div className="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <Zap className="w-6 h-6 text-yellow-300" />
-              </div>
-              <p className="text-gray-200 text-sm leading-relaxed">End-to-end support from idea to launch</p>
-            </div>
+            <p>
+              From the spark of an idea to the glory of launch,
+              we walk beside you—
+              your trusted guide in reimagining what's possible.
+            </p>
           </div>
         </div>
       </div>
