@@ -20,9 +20,9 @@ const Hero = () => {
       
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
         {/* Animated Main Title */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <div className="overflow-hidden">
-            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 animate-fade-in-up" data-testid="hero-main-title">
+            <h1 className="text-2xl lg:text-4xl font-bold text-white mb-3 animate-fade-in-up" data-testid="hero-main-title">
               <span className="block animate-text-gradient bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400 bg-clip-text text-transparent bg-300% animate-gradient-x">
                 Empowering Your
               </span>
@@ -35,18 +35,18 @@ const Hero = () => {
             </h1>
           </div>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-fade-in-up mb-8" style={{animationDelay: "0.9s"}} data-testid="hero-subtitle">
+          <p className="text-sm text-gray-300 max-w-xl mx-auto animate-fade-in-up mb-4" style={{animationDelay: "0.9s"}} data-testid="hero-subtitle">
             We develop cutting-edge software solutions that merge sports, technology, and AI to deliver powerful digital experiences.
           </p>
           
           <div className="animate-fade-in-up" style={{animationDelay: "1.1s"}}>
             <button 
               onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-sm"
               data-testid="hero-cta-button"
             >
               Start Your Journey
-              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </button>
