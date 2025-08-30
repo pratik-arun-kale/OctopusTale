@@ -1,5 +1,6 @@
 import Header from "@/components/header";
 import Hero from "@/components/hero";
+import Features from "@/components/features";
 import Services from "@/components/services";
 import FeaturedProject from "@/components/featured-project";
 import Contact from "@/components/contact";
@@ -37,6 +38,7 @@ const Home = () => {
       <div className="relative z-10">
         <Header />
         <Hero />
+        <Features />
         <Services />
         <FeaturedProject />
         <Contact />
