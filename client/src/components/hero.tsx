@@ -1,21 +1,16 @@
 import { Building2, CheckCircle, Cloud, Zap } from "lucide-react";
-import heroVideo from "@assets/gen_Ai_File_c5124ebe53_1756563552419.mp4";
+import heroGif from "@assets/gen-Ai-File-c5124ebe53-unscreen_1756564970348.gif";
 
 const Hero = () => {
   return (
     <section id="home" className="pt-16 relative overflow-hidden" data-testid="hero-section">
-      {/* Background Video */}
+      {/* Background GIF */}
       <div className="absolute inset-0 z-0 flex items-center justify-center">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-4/5 h-3/4 object-cover opacity-60 rounded-3xl"
-        >
-          <source src={heroVideo} type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/30"></div>
+        <img
+          src={heroGif}
+          alt="AI Animation"
+          className="w-4/5 h-3/4 object-contain opacity-80"
+        />
       </div>
       
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
