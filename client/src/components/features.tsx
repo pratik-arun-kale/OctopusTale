@@ -9,30 +9,34 @@ const Features = () => {
             Why Teams & Enterprises Choose Us
           </h2>
           
-          <div className="max-w-4xl mx-auto text-lg text-gray-300 leading-relaxed space-y-6">
-            <p>
-              Where passion meets precision, we stand as partners in progress.
-              With industry-rooted expertise in sports technology,
-              we turn challenges into breakthroughs, and data into destiny.
-            </p>
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="backdrop-blur-sm p-8 rounded-2xl border border-white/20 transition-all duration-300" style={{ backgroundColor: '#17161A' }}>
+              <h3 className="text-2xl font-bold text-white mb-4">10+ years of sports-tech expertise</h3>
+              <p className="text-gray-300 leading-relaxed">
+                We understand the unique challenges of the sports industry and bring specialized knowledge to solve them effectively.
+              </p>
+            </div>
             
-            <p>
-              Our legacy of digital transformation speaks louder than words—
-              stories of vision brought to life,
-              of clubs and enterprises leaping boldly into the future.
-            </p>
+            <div className="backdrop-blur-sm p-8 rounded-2xl border border-white/20 transition-all duration-300" style={{ backgroundColor: '#17161A' }}>
+              <h3 className="text-2xl font-bold text-white mb-4">50+ successful digital transformation projects</h3>
+              <p className="text-gray-300 leading-relaxed">
+                A proven track record of helping organizations modernize, optimize, and achieve measurable results.
+              </p>
+            </div>
             
-            <p>
-              Built on the strength of agility, scalability, and cloud-powered design,
-              our solutions grow as you grow,
-              keeping pace with the speed of sport itself.
-            </p>
+            <div className="backdrop-blur-sm p-8 rounded-2xl border border-white/20 transition-all duration-300" style={{ backgroundColor: '#17161A' }}>
+              <h3 className="text-2xl font-bold text-white mb-4">99.9% uptime, cloud-ready & scalable</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Our solutions are designed to adapt as your business grows—ensuring flexibility, reliability, and future-proof performance.
+              </p>
+            </div>
             
-            <p>
-              From the spark of an idea to the glory of launch,
-              we walk beside you—
-              your trusted guide in reimagining what's possible.
-            </p>
+            <div className="backdrop-blur-sm p-8 rounded-2xl border border-white/20 transition-all duration-300" style={{ backgroundColor: '#17161A' }}>
+              <h3 className="text-2xl font-bold text-white mb-4">End-to-end support, 24/7 availability</h3>
+              <p className="text-gray-300 leading-relaxed">
+                From the first strategy session to post-launch growth, we partner with you every step of the way.
+              </p>
+            </div>
           </div>
         </div>
       </div>
