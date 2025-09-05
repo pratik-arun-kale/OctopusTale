@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ExternalLink, Clock, Building, Cpu } from 'lucide-react';
 import { Link } from 'wouter';
 import simukaMobileApp from '@assets/image_1757070402980.png';
+import xpEatsApp from '@assets/image_1757070528679.png';
 
 // Sample case studies data - replace with your actual data from PowerPoint
 const caseStudies = [
@@ -37,6 +38,21 @@ const caseStudies = [
   },
   {
     id: '3',
+    title: 'XP Eats Mobile App',
+    subtitle: 'Mobile Meal Gifting Platform',
+    description: 'Innovative platform connecting donors with local suppliers for gifting meals and products to those in need.',
+    challenge: 'Traditional charity systems lacked transparency and efficient meal distribution, making it difficult for donors to verify their contributions reached those in need.',
+    solution: 'Developed a comprehensive mobile platform with meal ordering, gifting functionality, and real-time donation tracking with instant verification for every contribution.',
+    results: '300% increase in charitable donations, partnerships with 50+ local suppliers, verified delivery to 20+ charities, zero waste initiative achieved.',
+    technologies: ['React Native', 'Node.js', 'PostgreSQL', 'Stripe', 'Google Maps API'],
+    industry: 'Social Impact Technology',
+    projectDuration: '9 months',
+    clientName: 'XP Eats Foundation',
+    imageUrl: xpEatsApp,
+    featured: true
+  },
+  {
+    id: '4',
     title: 'Cloud-Based Betting Platform',
     subtitle: 'Secure & Scalable Gaming',
     description: 'Enterprise-grade betting platform with advanced security, real-time odds, and multi-platform support.',
@@ -104,7 +120,7 @@ export default function CaseStudiesSlideshow() {
             <div className="grid lg:grid-cols-2 gap-0">
               {/* Image Section */}
               <div className="relative h-96 lg:h-[500px] bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
-                {currentCase.title === 'Simuka Football Mobile App' ? (
+                {(currentCase.title === 'Simuka Football Mobile App' || currentCase.title === 'XP Eats Mobile App') ? (
                   <img 
                     src={currentCase.imageUrl} 
                     alt={currentCase.title}

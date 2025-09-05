@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ChevronDown, Clock, Building, Cpu, Target, Lightbulb, TrendingUp, Filter, Search } from 'lucide-react';
 import { Link } from 'wouter';
 import simukaMobileApp from '@assets/image_1757070402980.png';
+import xpEatsApp from '@assets/image_1757070528679.png';
 
 // Sample case studies data - replace with your actual data from PowerPoint
 const allCaseStudies = [
@@ -37,6 +38,21 @@ const allCaseStudies = [
   },
   {
     id: '3',
+    title: 'XP Eats Mobile App',
+    subtitle: 'Mobile Meal Gifting Platform',
+    description: 'Innovative platform connecting donors with local suppliers for gifting meals and products to those in need, streamlining generosity and minimizing waste.',
+    challenge: 'Traditional charity systems lacked transparency and efficient meal distribution, making it difficult for donors to verify their contributions reached those in need. Food waste was a significant issue with poor coordination between suppliers and charities.',
+    solution: 'Developed a comprehensive mobile platform with meal ordering, gifting functionality, and real-time donation tracking. Integrated local suppliers with charities for seamless delivery and instant verification for every donation.',
+    results: '300% increase in charitable donations, partnerships with 50+ local suppliers, verified delivery to 20+ charities, zero waste initiative achieved, 95% donor satisfaction rate.',
+    technologies: ['React Native', 'Node.js', 'PostgreSQL', 'Stripe', 'Google Maps API', 'Firebase', 'WebRTC'],
+    industry: 'Social Impact Technology',
+    projectDuration: '9 months',
+    clientName: 'XP Eats Foundation',
+    imageUrl: xpEatsApp,
+    featured: true
+  },
+  {
+    id: '4',
     title: 'Cloud-Based Betting Platform',
     subtitle: 'Secure & Scalable Gaming',
     description: 'Enterprise-grade betting platform with advanced security, real-time odds calculation, and multi-platform support for international markets.',
@@ -97,7 +113,7 @@ const allCaseStudies = [
   }
 ];
 
-const industries = ['All', 'Sports Technology', 'Sports Entertainment', 'Gaming & Betting', 'Smart Infrastructure', 'E-Sports', 'Sports Health Tech'];
+const industries = ['All', 'Sports Technology', 'Sports Entertainment', 'Gaming & Betting', 'Smart Infrastructure', 'E-Sports', 'Sports Health Tech', 'Social Impact Technology'];
 
 export default function CaseStudiesPage() {
   const [selectedIndustry, setSelectedIndustry] = useState('All');
@@ -197,7 +213,7 @@ export default function CaseStudiesPage() {
                 data-testid={`card-featured-${caseStudy.id}`}
               >
                 <div className="h-40 bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
-                  {caseStudy.title === 'Simuka Football Mobile App' ? (
+                  {(caseStudy.title === 'Simuka Football Mobile App' || caseStudy.title === 'XP Eats Mobile App') ? (
                     <img 
                       src={caseStudy.imageUrl} 
                       alt={caseStudy.title}
