@@ -2,7 +2,7 @@ import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Features from "@/components/features";
 import Services from "@/components/services";
-import FeaturedProject from "@/components/featured-project";
+import CaseStudiesSlideshow from "@/components/case-studies-slideshow";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 
@@ -40,7 +40,7 @@ const Home = () => {
         <Hero />
         <Features />
         <Services />
-        <FeaturedProject />
+        <CaseStudiesSlideshow />
         <Contact />
         <Footer />
       </div>

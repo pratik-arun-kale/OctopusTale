@@ -61,7 +61,7 @@ const Header = () => {
                 Service
               </button>
               <button 
-                onClick={() => navigateToPage("/", "featured-projects")} 
+                onClick={() => navigateToPage("/case-studies")} 
                 className="text-gray-200 hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors"
                 data-testid="nav-case-studies"
               >
@@ -121,7 +121,7 @@ const Header = () => {
                 Service
               </button>
               <button 
-                onClick={() => navigateToPage("/", "featured-projects")} 
+                onClick={() => navigateToPage("/case-studies")} 
                 className="text-gray-200 hover:text-blue-300 block px-3 py-2 text-base font-medium w-full text-left"
                 data-testid="mobile-nav-case-studies"
               >
