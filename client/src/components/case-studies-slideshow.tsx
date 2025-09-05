@@ -148,13 +148,13 @@ export default function CaseStudiesSlideshow() {
   const currentCase = caseStudies[currentSlide];
 
   return (
-    <section className="py-20 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+    <section className="py-14 px-6">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-11">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
             Featured Projects
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Discover how we've transformed businesses through innovative sports technology solutions
           </p>
         </div>
@@ -167,17 +167,17 @@ export default function CaseStudiesSlideshow() {
           >
             <div className="grid lg:grid-cols-2 gap-0">
               {/* Image Section */}
-              <div className="relative h-96 lg:h-[500px] bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
+              <div className="relative h-67 lg:h-[350px] bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
                 {(currentCase.title === 'Simuka Football Mobile App' || currentCase.title === 'XP Eats Mobile App' || currentCase.title === 'Crick Mobile App' || currentCase.title === 'Skatey Mobile App' || currentCase.title === 'England Cricket Board Mobile App') ? (
                   <img 
                     src={currentCase.imageUrl} 
                     alt={currentCase.title}
-                    className="w-full h-full object-contain p-4"
+                    className="w-full h-full object-contain p-3"
                   />
                 ) : (
                   <div className="text-center text-white/60">
-                    <Cpu size={64} className="mx-auto mb-4" />
-                    <p className="text-lg">{currentCase.title}</p>
+                    <Cpu size={45} className="mx-auto mb-3" />
+                    <p className="text-base">{currentCase.title}</p>
                   </div>
                 )}
                 
@@ -199,49 +199,49 @@ export default function CaseStudiesSlideshow() {
               </div>
 
               {/* Content Section */}
-              <div className="p-8 lg:p-12">
-                <div className="mb-6">
-                  <span className="inline-block px-4 py-2 rounded-full bg-purple-500/20 text-purple-300 text-sm font-medium mb-4">
+              <div className="p-6 lg:p-8">
+                <div className="mb-4">
+                  <span className="inline-block px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-medium mb-3">
                     {currentCase.industry}
                   </span>
-                  <h3 className="text-3xl lg:text-4xl font-bold text-white mb-3">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2">
                     {currentCase.title}
                   </h3>
-                  <p className="text-xl text-purple-300 mb-6">
+                  <p className="text-lg text-purple-300 mb-4">
                     {currentCase.subtitle}
                   </p>
                 </div>
 
-                <p className="text-gray-300 text-lg leading-relaxed mb-8">
+                <p className="text-gray-300 text-base leading-relaxed mb-6">
                   {currentCase.description}
                 </p>
 
                 {/* Quick Stats */}
-                <div className="grid grid-cols-2 gap-6 mb-8">
-                  <div className="flex items-center gap-3">
-                    <Clock size={20} className="text-purple-400" />
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="flex items-center gap-2">
+                    <Clock size={16} className="text-purple-400" />
                     <div>
-                      <p className="text-sm text-gray-400">Duration</p>
-                      <p className="text-white font-medium">{currentCase.projectDuration}</p>
+                      <p className="text-xs text-gray-400">Duration</p>
+                      <p className="text-white font-medium text-sm">{currentCase.projectDuration}</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <Building size={20} className="text-purple-400" />
+                  <div className="flex items-center gap-2">
+                    <Building size={16} className="text-purple-400" />
                     <div>
-                      <p className="text-sm text-gray-400">Client</p>
-                      <p className="text-white font-medium">{currentCase.clientName}</p>
+                      <p className="text-xs text-gray-400">Client</p>
+                      <p className="text-white font-medium text-sm">{currentCase.clientName}</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Technologies */}
-                <div className="mb-8">
-                  <p className="text-sm text-gray-400 mb-3">Technologies Used</p>
-                  <div className="flex flex-wrap gap-2">
+                <div className="mb-6">
+                  <p className="text-xs text-gray-400 mb-2">Technologies Used</p>
+                  <div className="flex flex-wrap gap-1">
                     {currentCase.technologies.map((tech, index) => (
                       <span 
                         key={index}
-                        className="px-3 py-1 rounded-full bg-white/10 text-white text-sm border border-white/20"
+                        className="px-2 py-1 rounded-full bg-white/10 text-white text-xs border border-white/20"
                       >
                         {tech}
                       </span>
@@ -252,11 +252,11 @@ export default function CaseStudiesSlideshow() {
                 {/* CTA */}
                 <Link href="/case-studies">
                   <button 
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-medium transition-all duration-300 transform hover:scale-105"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-medium transition-all duration-300 transform hover:scale-105 text-sm"
                     data-testid="button-view-case-study"
                   >
                     View Full Case Study
-                    <ExternalLink size={16} />
+                    <ExternalLink size={14} />
                   </button>
                 </Link>
               </div>
@@ -280,10 +280,10 @@ export default function CaseStudiesSlideshow() {
           </div>
 
           {/* View All Cases Button */}
-          <div className="text-center mt-12">
+          <div className="text-center mt-8">
             <Link href="/case-studies">
               <button 
-                className="px-8 py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
+                className="px-6 py-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300 transform hover:scale-105 text-sm"
                 data-testid="button-view-all-cases"
               >
                 View All Case Studies
