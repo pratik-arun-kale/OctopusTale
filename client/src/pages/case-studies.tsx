@@ -295,12 +295,12 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* All Cases */}
-      <section className="py-16 px-6">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12 text-center">
+      <section className="py-13 px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl lg:text-3xl font-bold text-white mb-10 text-center">
             All Case Studies
           </h2>
-          <div className="grid gap-7">
+          <div className="grid gap-6">
             {filteredCases.map((caseStudy) => (
               <div 
                 key={caseStudy.id}
@@ -308,61 +308,61 @@ export default function CaseStudiesPage() {
                 style={{ backgroundColor: '#17161A' }}
               >
                 <div className="grid lg:grid-cols-3 gap-0">
-                  <div className="h-56 lg:h-auto bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
-                    {caseStudy.title === 'Simuka Football Mobile App' ? (
+                  <div className="h-45 lg:h-auto bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
+                    {(caseStudy.title === 'Simuka Football Mobile App' || caseStudy.title === 'XP Eats Mobile App' || caseStudy.title === 'Crick Mobile App' || caseStudy.title === 'Skatey Mobile App' || caseStudy.title === 'England Cricket Board Mobile App') ? (
                       <img 
                         src={caseStudy.imageUrl} 
                         alt={caseStudy.title}
-                        className="w-full h-full object-contain p-4"
+                        className="w-full h-full object-contain p-3"
                       />
                     ) : (
-                      <Cpu size={56} className="text-white/60" />
+                      <Cpu size={45} className="text-white/60" />
                     )}
                   </div>
-                  <div className="lg:col-span-2 p-7">
-                    <div className="flex items-start justify-between mb-4">
+                  <div className="lg:col-span-2 p-5">
+                    <div className="flex items-start justify-between mb-3">
                       <div>
-                        <span className="inline-block px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-sm mb-3">
+                        <span className="inline-block px-2 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs mb-2">
                           {caseStudy.industry}
                         </span>
-                        <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2">{caseStudy.title}</h3>
-                        <p className="text-xl text-purple-300 mb-4">{caseStudy.subtitle}</p>
+                        <h3 className="text-xl lg:text-2xl font-bold text-white mb-2">{caseStudy.title}</h3>
+                        <p className="text-lg text-purple-300 mb-3">{caseStudy.subtitle}</p>
                       </div>
                       <button
                         onClick={() => setSelectedCase(selectedCase === caseStudy.id ? null : caseStudy.id)}
-                        className="px-4 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-medium transition-colors"
+                        className="px-3 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-medium transition-colors text-sm"
                         data-testid={`button-view-details-${caseStudy.id}`}
                       >
                         {selectedCase === caseStudy.id ? 'Hide Details' : 'View Details'}
                       </button>
                     </div>
                     
-                    <p className="text-gray-300 text-lg mb-6">{caseStudy.description}</p>
+                    <p className="text-gray-300 text-base mb-5">{caseStudy.description}</p>
                     
-                    <div className="grid md:grid-cols-2 gap-6 mb-6">
-                      <div className="flex items-center gap-3">
-                        <Clock size={20} className="text-purple-400" />
+                    <div className="grid md:grid-cols-2 gap-4 mb-5">
+                      <div className="flex items-center gap-2">
+                        <Clock size={16} className="text-purple-400" />
                         <div>
-                          <p className="text-sm text-gray-400">Duration</p>
-                          <p className="text-white font-medium">{caseStudy.projectDuration}</p>
+                          <p className="text-xs text-gray-400">Duration</p>
+                          <p className="text-white font-medium text-sm">{caseStudy.projectDuration}</p>
                         </div>
                       </div>
-                      <div className="flex items-center gap-3">
-                        <Building size={20} className="text-purple-400" />
+                      <div className="flex items-center gap-2">
+                        <Building size={16} className="text-purple-400" />
                         <div>
-                          <p className="text-sm text-gray-400">Client</p>
-                          <p className="text-white font-medium">{caseStudy.clientName}</p>
+                          <p className="text-xs text-gray-400">Client</p>
+                          <p className="text-white font-medium text-sm">{caseStudy.clientName}</p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="mb-6">
-                      <p className="text-sm text-gray-400 mb-3">Technologies Used</p>
-                      <div className="flex flex-wrap gap-2">
+                    <div className="mb-5">
+                      <p className="text-xs text-gray-400 mb-2">Technologies Used</p>
+                      <div className="flex flex-wrap gap-1">
                         {caseStudy.technologies.map((tech, index) => (
                           <span 
                             key={index}
-                            className="px-3 py-1 rounded-full bg-white/10 text-white text-sm border border-white/20"
+                            className="px-2 py-1 rounded-full bg-white/10 text-white text-xs border border-white/20"
                           >
                             {tech}
                           </span>
@@ -372,28 +372,28 @@ export default function CaseStudiesPage() {
 
                     {/* Expanded Details */}
                     {selectedCase === caseStudy.id && (
-                      <div className="mt-8 pt-8 border-t border-white/20">
-                        <div className="grid md:grid-cols-3 gap-8">
+                      <div className="mt-6 pt-6 border-t border-white/20">
+                        <div className="grid md:grid-cols-3 gap-6">
                           <div>
-                            <div className="flex items-center gap-2 mb-4">
-                              <Target className="text-red-400" size={24} />
-                              <h4 className="text-xl font-bold text-white">Challenge</h4>
+                            <div className="flex items-center gap-2 mb-3">
+                              <Target className="text-red-400" size={20} />
+                              <h4 className="text-lg font-bold text-white">Challenge</h4>
                             </div>
-                            <p className="text-gray-300 leading-relaxed">{caseStudy.challenge}</p>
+                            <p className="text-gray-300 leading-relaxed text-sm">{caseStudy.challenge}</p>
                           </div>
                           <div>
-                            <div className="flex items-center gap-2 mb-4">
-                              <Lightbulb className="text-yellow-400" size={24} />
-                              <h4 className="text-xl font-bold text-white">Solution</h4>
+                            <div className="flex items-center gap-2 mb-3">
+                              <Lightbulb className="text-yellow-400" size={20} />
+                              <h4 className="text-lg font-bold text-white">Solution</h4>
                             </div>
-                            <p className="text-gray-300 leading-relaxed">{caseStudy.solution}</p>
+                            <p className="text-gray-300 leading-relaxed text-sm">{caseStudy.solution}</p>
                           </div>
                           <div>
-                            <div className="flex items-center gap-2 mb-4">
-                              <TrendingUp className="text-green-400" size={24} />
-                              <h4 className="text-xl font-bold text-white">Results</h4>
+                            <div className="flex items-center gap-2 mb-3">
+                              <TrendingUp className="text-green-400" size={20} />
+                              <h4 className="text-lg font-bold text-white">Results</h4>
                             </div>
-                            <p className="text-gray-300 leading-relaxed">{caseStudy.results}</p>
+                            <p className="text-gray-300 leading-relaxed text-sm">{caseStudy.results}</p>
                           </div>
                         </div>
                       </div>
