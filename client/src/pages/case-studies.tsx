@@ -5,11 +5,27 @@ import simukaMobileApp from '@assets/image_1757070402980.png';
 import xpEatsApp from '@assets/image_1757070528679.png';
 import crickApp from '@assets/image_1757070577706.png';
 import skateyApp from '@assets/image_1757070649510.png';
+import ecbApp from '@assets/image_1757070763558.png';
 
 // Sample case studies data - replace with your actual data from PowerPoint
 const allCaseStudies = [
   {
     id: '1',
+    title: 'England Cricket Board Mobile App',
+    subtitle: 'Official ECB Cricket Experience',
+    description: 'Official mobile app delivered for the England and Wales Cricket Board, serving fans, coaches, recreational players, and volunteers with comprehensive cricket experience.',
+    challenge: 'The England and Wales Cricket Board needed a comprehensive mobile platform to engage their diverse cricket community including fans, coaches, recreational players, and volunteers with a unified digital experience.',
+    solution: 'Developed the official ECB mobile app featuring latest news and videos, live scores, team line-ups, detailed scorecards, integrated video content, new matches area, and comprehensive league tables for complete cricket coverage.',
+    results: 'Successfully delivered official app for England and Wales Cricket Board, comprehensive cricket experience serving all user types, enhanced fan engagement across the England cricket community, increased digital reach.',
+    technologies: ['React Native', 'Node.js', 'Real-time APIs', 'Video Streaming', 'PostgreSQL', 'Push Notifications', 'Live Data Integration'],
+    industry: 'Sports Technology',
+    projectDuration: '10 months',
+    clientName: 'England and Wales Cricket Board',
+    imageUrl: ecbApp,
+    featured: true
+  },
+  {
+    id: '2',
     title: 'AI-Powered Sports Analytics Platform',
     subtitle: 'Real-time Performance Insights',
     description: 'Revolutionary analytics platform transforming how teams analyze player performance and game strategies using advanced machine learning algorithms.',
@@ -245,7 +261,7 @@ export default function CaseStudiesPage() {
                 data-testid={`card-featured-${caseStudy.id}`}
               >
                 <div className="h-40 bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
-                  {(caseStudy.title === 'Simuka Football Mobile App' || caseStudy.title === 'XP Eats Mobile App' || caseStudy.title === 'Crick Mobile App' || caseStudy.title === 'Skatey Mobile App') ? (
+                  {(caseStudy.title === 'Simuka Football Mobile App' || caseStudy.title === 'XP Eats Mobile App' || caseStudy.title === 'Crick Mobile App' || caseStudy.title === 'Skatey Mobile App' || caseStudy.title === 'England Cricket Board Mobile App') ? (
                     <img 
                       src={caseStudy.imageUrl} 
                       alt={caseStudy.title}

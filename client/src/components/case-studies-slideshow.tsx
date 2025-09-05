@@ -5,11 +5,27 @@ import simukaMobileApp from '@assets/image_1757070402980.png';
 import xpEatsApp from '@assets/image_1757070528679.png';
 import crickApp from '@assets/image_1757070577706.png';
 import skateyApp from '@assets/image_1757070649510.png';
+import ecbApp from '@assets/image_1757070763558.png';
 
 // Sample case studies data - replace with your actual data from PowerPoint
 const caseStudies = [
   {
     id: '1',
+    title: 'England Cricket Board Mobile App',
+    subtitle: 'Official ECB Cricket Experience',
+    description: 'Official mobile app delivered for the England and Wales Cricket Board, serving fans, coaches, players, and volunteers.',
+    challenge: 'ECB needed a comprehensive mobile platform to engage diverse cricket community including fans, coaches, recreational players, and volunteers with unified experience.',
+    solution: 'Developed official ECB mobile app with latest news, live scores, team line-ups, scorecards, integrated videos, matches area, and league tables for complete cricket experience.',
+    results: 'Successfully delivered for England and Wales Cricket Board, comprehensive cricket experience for all user types, enhanced fan engagement across England cricket community.',
+    technologies: ['React Native', 'Node.js', 'Real-time APIs', 'Video Streaming', 'PostgreSQL', 'Push Notifications'],
+    industry: 'Sports Technology',
+    projectDuration: '10 months',
+    clientName: 'England and Wales Cricket Board',
+    imageUrl: ecbApp,
+    featured: true
+  },
+  {
+    id: '2',
     title: 'AI-Powered Sports Analytics Platform',
     subtitle: 'Real-time Performance Insights',
     description: 'Revolutionary analytics platform transforming how teams analyze player performance and game strategies.',
@@ -152,7 +168,7 @@ export default function CaseStudiesSlideshow() {
             <div className="grid lg:grid-cols-2 gap-0">
               {/* Image Section */}
               <div className="relative h-96 lg:h-[500px] bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
-                {(currentCase.title === 'Simuka Football Mobile App' || currentCase.title === 'XP Eats Mobile App' || currentCase.title === 'Crick Mobile App' || currentCase.title === 'Skatey Mobile App') ? (
+                {(currentCase.title === 'Simuka Football Mobile App' || currentCase.title === 'XP Eats Mobile App' || currentCase.title === 'Crick Mobile App' || currentCase.title === 'Skatey Mobile App' || currentCase.title === 'England Cricket Board Mobile App') ? (
                   <img 
                     src={currentCase.imageUrl} 
                     alt={currentCase.title}
