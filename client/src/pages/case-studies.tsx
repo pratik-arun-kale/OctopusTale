@@ -186,19 +186,19 @@ export default function CaseStudiesPage() {
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12 text-center">
             Featured Projects
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
             {featuredCases.map((caseStudy) => (
               <div 
                 key={caseStudy.id}
-                className="backdrop-blur-sm rounded-2xl border border-white/20 overflow-hidden hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                className="backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"
                 style={{ backgroundColor: '#17161A' }}
                 onClick={() => setSelectedCase(caseStudy.id)}
                 data-testid={`card-featured-${caseStudy.id}`}
               >
-                <div className="h-48 bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
-                  <Cpu size={48} className="text-white/60" />
+                <div className="h-40 bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
+                  <Cpu size={40} className="text-white/60" />
                 </div>
-                <div className="p-6">
+                <div className="p-5">
                   <span className="inline-block px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-sm mb-3">
                     {caseStudy.industry}
                   </span>
@@ -227,18 +227,18 @@ export default function CaseStudiesPage() {
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12 text-center">
             All Case Studies
           </h2>
-          <div className="grid gap-8">
+          <div className="grid gap-7">
             {filteredCases.map((caseStudy) => (
               <div 
                 key={caseStudy.id}
-                className="backdrop-blur-sm rounded-2xl border border-white/20 overflow-hidden hover:border-purple-500/50 transition-all duration-300"
+                className="backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden hover:border-purple-500/50 transition-all duration-300"
                 style={{ backgroundColor: '#17161A' }}
               >
                 <div className="grid lg:grid-cols-3 gap-0">
-                  <div className="h-64 lg:h-auto bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
-                    <Cpu size={64} className="text-white/60" />
+                  <div className="h-56 lg:h-auto bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
+                    <Cpu size={56} className="text-white/60" />
                   </div>
-                  <div className="lg:col-span-2 p-8">
+                  <div className="lg:col-span-2 p-7">
                     <div className="flex items-start justify-between mb-4">
                       <div>
                         <span className="inline-block px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-sm mb-3">
@@ -336,7 +336,7 @@ export default function CaseStudiesPage() {
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div 
-            className="backdrop-blur-sm rounded-3xl border border-white/20 p-12"
+            className="backdrop-blur-sm rounded-2xl border border-white/20 p-10"
             style={{ backgroundColor: '#17161A' }}
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
