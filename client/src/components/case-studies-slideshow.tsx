@@ -4,6 +4,7 @@ import { Link } from 'wouter';
 import simukaMobileApp from '@assets/image_1757070402980.png';
 import xpEatsApp from '@assets/image_1757070528679.png';
 import crickApp from '@assets/image_1757070577706.png';
+import skateyApp from '@assets/image_1757070649510.png';
 
 // Sample case studies data - replace with your actual data from PowerPoint
 const caseStudies = [
@@ -69,6 +70,21 @@ const caseStudies = [
   },
   {
     id: '5',
+    title: 'Skatey Mobile App',
+    subtitle: 'Skating Fan Engagement Platform',
+    description: 'Fan engagement platform crafted by skate enthusiasts for skate enthusiasts, offering live e-mentoring and group mentoring.',
+    challenge: 'Skating community lacked a dedicated platform for mentorship and fan engagement, making it difficult for aspiring skaters to connect with professionals and peers.',
+    solution: 'Developed a comprehensive platform with live e-mentoring, group mentoring, dynamic chat groups, social posts, and live events, featuring partnership with renowned Canadian skater Jessy Jean Bert.',
+    results: 'Partnership with professional skaters, growing community of skating enthusiasts, enhanced skill development through mentorship programs.',
+    technologies: ['React Native', 'Node.js', 'Socket.io', 'MongoDB', 'WebRTC', 'Firebase'],
+    industry: 'Sports Entertainment',
+    projectDuration: '7 months',
+    clientName: 'Skatey Community',
+    imageUrl: skateyApp,
+    featured: false
+  },
+  {
+    id: '6',
     title: 'Cloud-Based Betting Platform',
     subtitle: 'Secure & Scalable Gaming',
     description: 'Enterprise-grade betting platform with advanced security, real-time odds, and multi-platform support.',
@@ -136,7 +152,7 @@ export default function CaseStudiesSlideshow() {
             <div className="grid lg:grid-cols-2 gap-0">
               {/* Image Section */}
               <div className="relative h-96 lg:h-[500px] bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
-                {(currentCase.title === 'Simuka Football Mobile App' || currentCase.title === 'XP Eats Mobile App' || currentCase.title === 'Crick Mobile App') ? (
+                {(currentCase.title === 'Simuka Football Mobile App' || currentCase.title === 'XP Eats Mobile App' || currentCase.title === 'Crick Mobile App' || currentCase.title === 'Skatey Mobile App') ? (
                   <img 
                     src={currentCase.imageUrl} 
                     alt={currentCase.title}

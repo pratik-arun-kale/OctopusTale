@@ -4,6 +4,7 @@ import { Link } from 'wouter';
 import simukaMobileApp from '@assets/image_1757070402980.png';
 import xpEatsApp from '@assets/image_1757070528679.png';
 import crickApp from '@assets/image_1757070577706.png';
+import skateyApp from '@assets/image_1757070649510.png';
 
 // Sample case studies data - replace with your actual data from PowerPoint
 const allCaseStudies = [
@@ -69,6 +70,21 @@ const allCaseStudies = [
   },
   {
     id: '5',
+    title: 'Skatey Mobile App',
+    subtitle: 'Skating Fan Engagement Platform',
+    description: 'Fan engagement platform crafted by skate enthusiasts for skate enthusiasts, offering live e-mentoring and group mentoring to foster future champions.',
+    challenge: 'The skating community lacked a dedicated platform for mentorship and fan engagement, making it difficult for aspiring skaters to connect with professional mentors and build a supportive community.',
+    solution: 'Developed a comprehensive fan engagement platform with live e-mentoring sessions, group mentoring programs, dynamic chat groups, social posts, and live events. Featured partnership with renowned Canadian skater Jessy Jean Bert for added expertise.',
+    results: 'Successful partnership with professional skaters, growing community of skating enthusiasts, enhanced skill development through structured mentorship programs, increased fan engagement in skating sports.',
+    technologies: ['React Native', 'Node.js', 'Socket.io', 'MongoDB', 'WebRTC', 'Firebase', 'Real-time Chat'],
+    industry: 'Sports Entertainment',
+    projectDuration: '7 months',
+    clientName: 'Skatey Community',
+    imageUrl: skateyApp,
+    featured: false
+  },
+  {
+    id: '6',
     title: 'Cloud-Based Betting Platform',
     subtitle: 'Secure & Scalable Gaming',
     description: 'Enterprise-grade betting platform with advanced security, real-time odds calculation, and multi-platform support for international markets.',
@@ -229,7 +245,7 @@ export default function CaseStudiesPage() {
                 data-testid={`card-featured-${caseStudy.id}`}
               >
                 <div className="h-40 bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
-                  {(caseStudy.title === 'Simuka Football Mobile App' || caseStudy.title === 'XP Eats Mobile App' || caseStudy.title === 'Crick Mobile App') ? (
+                  {(caseStudy.title === 'Simuka Football Mobile App' || caseStudy.title === 'XP Eats Mobile App' || caseStudy.title === 'Crick Mobile App' || caseStudy.title === 'Skatey Mobile App') ? (
                     <img 
                       src={caseStudy.imageUrl} 
                       alt={caseStudy.title}
