@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight, ExternalLink, Clock, Building, Cpu } from 'l
 import { Link } from 'wouter';
 import simukaMobileApp from '@assets/image_1757070402980.png';
 import xpEatsApp from '@assets/image_1757070528679.png';
+import crickApp from '@assets/image_1757070577706.png';
 
 // Sample case studies data - replace with your actual data from PowerPoint
 const caseStudies = [
@@ -53,6 +54,21 @@ const caseStudies = [
   },
   {
     id: '4',
+    title: 'Crick Mobile App',
+    subtitle: 'AI-Enabled Cricket Mentorship',
+    description: 'World\'s leading AI-enabled application for cricket mentorship with access to vast intellectual property content.',
+    challenge: 'Cricket players lacked access to professional mentorship and comprehensive training resources, limiting skill development opportunities globally.',
+    solution: 'Developed an AI-driven platform offering e-mentoring, direct coaching, white labelling capabilities, and live scoring with extensive cricket knowledge base.',
+    results: 'Adopted by 100K+ players worldwide, partnerships with professional cricket academies, 95% skill improvement rate, featured as world\'s first AI cricket platform.',
+    technologies: ['React Native', 'AI/ML', 'Python', 'TensorFlow', 'Node.js', 'Real-time APIs'],
+    industry: 'Sports Technology',
+    projectDuration: '11 months',
+    clientName: 'Cricket Academy International',
+    imageUrl: crickApp,
+    featured: true
+  },
+  {
+    id: '5',
     title: 'Cloud-Based Betting Platform',
     subtitle: 'Secure & Scalable Gaming',
     description: 'Enterprise-grade betting platform with advanced security, real-time odds, and multi-platform support.',
@@ -120,7 +136,7 @@ export default function CaseStudiesSlideshow() {
             <div className="grid lg:grid-cols-2 gap-0">
               {/* Image Section */}
               <div className="relative h-96 lg:h-[500px] bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
-                {(currentCase.title === 'Simuka Football Mobile App' || currentCase.title === 'XP Eats Mobile App') ? (
+                {(currentCase.title === 'Simuka Football Mobile App' || currentCase.title === 'XP Eats Mobile App' || currentCase.title === 'Crick Mobile App') ? (
                   <img 
                     src={currentCase.imageUrl} 
                     alt={currentCase.title}

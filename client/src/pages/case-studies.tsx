@@ -3,6 +3,7 @@ import { ChevronDown, Clock, Building, Cpu, Target, Lightbulb, TrendingUp, Filte
 import { Link } from 'wouter';
 import simukaMobileApp from '@assets/image_1757070402980.png';
 import xpEatsApp from '@assets/image_1757070528679.png';
+import crickApp from '@assets/image_1757070577706.png';
 
 // Sample case studies data - replace with your actual data from PowerPoint
 const allCaseStudies = [
@@ -53,6 +54,21 @@ const allCaseStudies = [
   },
   {
     id: '4',
+    title: 'Crick Mobile App',
+    subtitle: 'AI-Enabled Cricket Mentorship',
+    description: 'World\'s leading AI-enabled application for cricket mentorship with access to vast intellectual property content on cricket training and skill development.',
+    challenge: 'Cricket players worldwide lacked access to professional mentorship and comprehensive training resources. Traditional coaching was expensive, geographically limited, and inconsistent in quality.',
+    solution: 'Developed an AI-driven platform offering personalized e-mentoring, direct coaching sessions, white labelling capabilities for academies, and live scoring with extensive cricket knowledge base and skill analytics.',
+    results: 'Adopted by 100K+ players worldwide, partnerships with 25+ professional cricket academies, 95% skill improvement rate, recognized as world\'s first AI-powered cricket mentorship platform.',
+    technologies: ['React Native', 'AI/ML', 'Python', 'TensorFlow', 'Node.js', 'Real-time APIs', 'WebRTC', 'Analytics'],
+    industry: 'Sports Technology',
+    projectDuration: '11 months',
+    clientName: 'Cricket Academy International',
+    imageUrl: crickApp,
+    featured: true
+  },
+  {
+    id: '5',
     title: 'Cloud-Based Betting Platform',
     subtitle: 'Secure & Scalable Gaming',
     description: 'Enterprise-grade betting platform with advanced security, real-time odds calculation, and multi-platform support for international markets.',
@@ -213,7 +229,7 @@ export default function CaseStudiesPage() {
                 data-testid={`card-featured-${caseStudy.id}`}
               >
                 <div className="h-40 bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
-                  {(caseStudy.title === 'Simuka Football Mobile App' || caseStudy.title === 'XP Eats Mobile App') ? (
+                  {(caseStudy.title === 'Simuka Football Mobile App' || caseStudy.title === 'XP Eats Mobile App' || caseStudy.title === 'Crick Mobile App') ? (
                     <img 
                       src={caseStudy.imageUrl} 
                       alt={caseStudy.title}
