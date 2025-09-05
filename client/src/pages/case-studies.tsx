@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ChevronDown, Clock, Building, Cpu, Target, Lightbulb, TrendingUp, Filter, Search } from 'lucide-react';
 import { Link } from 'wouter';
+import simukaMobileApp from '@assets/image_1757070402980.png';
 
 // Sample case studies data - replace with your actual data from PowerPoint
 const allCaseStudies = [
@@ -21,7 +22,7 @@ const allCaseStudies = [
   },
   {
     id: '2',
-    title: 'Fan Engagement Mobile App',
+    title: 'Simuka Football Mobile App',
     subtitle: 'Interactive Fan Experience',
     description: 'Comprehensive mobile application enhancing fan engagement through interactive features, live polls, social integration, and gamification elements.',
     challenge: 'Sports organizations struggled to maintain fan engagement outside of game days and physical venues. Traditional marketing channels weren\'t reaching younger demographics effectively.',
@@ -30,8 +31,8 @@ const allCaseStudies = [
     technologies: ['React Native', 'Node.js', 'MongoDB', 'Firebase', 'Socket.io', 'ARKit', 'WebRTC'],
     industry: 'Sports Entertainment',
     projectDuration: '6 months',
-    clientName: 'Major Sports Franchise',
-    imageUrl: '/placeholder-mobile.jpg',
+    clientName: 'Simuka Football',
+    imageUrl: simukaMobileApp,
     featured: true
   },
   {
@@ -196,7 +197,15 @@ export default function CaseStudiesPage() {
                 data-testid={`card-featured-${caseStudy.id}`}
               >
                 <div className="h-40 bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
-                  <Cpu size={40} className="text-white/60" />
+                  {caseStudy.title === 'Simuka Football Mobile App' ? (
+                    <img 
+                      src={caseStudy.imageUrl} 
+                      alt={caseStudy.title}
+                      className="w-full h-full object-contain p-2"
+                    />
+                  ) : (
+                    <Cpu size={40} className="text-white/60" />
+                  )}
                 </div>
                 <div className="p-5">
                   <span className="inline-block px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-sm mb-3">
@@ -236,7 +245,15 @@ export default function CaseStudiesPage() {
               >
                 <div className="grid lg:grid-cols-3 gap-0">
                   <div className="h-56 lg:h-auto bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
-                    <Cpu size={56} className="text-white/60" />
+                    {caseStudy.title === 'Simuka Football Mobile App' ? (
+                      <img 
+                        src={caseStudy.imageUrl} 
+                        alt={caseStudy.title}
+                        className="w-full h-full object-contain p-4"
+                      />
+                    ) : (
+                      <Cpu size={56} className="text-white/60" />
+                    )}
                   </div>
                   <div className="lg:col-span-2 p-7">
                     <div className="flex items-start justify-between mb-4">

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ExternalLink, Clock, Building, Cpu } from 'lucide-react';
 import { Link } from 'wouter';
+import simukaMobileApp from '@assets/image_1757070402980.png';
 
 // Sample case studies data - replace with your actual data from PowerPoint
 const caseStudies = [
@@ -21,7 +22,7 @@ const caseStudies = [
   },
   {
     id: '2',
-    title: 'Fan Engagement Mobile App',
+    title: 'Simuka Football Mobile App',
     subtitle: 'Interactive Fan Experience',
     description: 'Mobile application enhancing fan engagement through interactive features, live polls, and social integration.',
     challenge: 'Sports organizations struggled to maintain fan engagement outside of game days and physical venues.',
@@ -30,8 +31,8 @@ const caseStudies = [
     technologies: ['React Native', 'Node.js', 'MongoDB', 'Firebase', 'Socket.io'],
     industry: 'Sports Entertainment',
     projectDuration: '6 months',
-    clientName: 'Major Sports Franchise',
-    imageUrl: '/placeholder-mobile.jpg',
+    clientName: 'Simuka Football',
+    imageUrl: simukaMobileApp,
     featured: true
   },
   {
@@ -103,10 +104,18 @@ export default function CaseStudiesSlideshow() {
             <div className="grid lg:grid-cols-2 gap-0">
               {/* Image Section */}
               <div className="relative h-96 lg:h-[500px] bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
-                <div className="text-center text-white/60">
-                  <Cpu size={64} className="mx-auto mb-4" />
-                  <p className="text-lg">{currentCase.title}</p>
-                </div>
+                {currentCase.title === 'Simuka Football Mobile App' ? (
+                  <img 
+                    src={currentCase.imageUrl} 
+                    alt={currentCase.title}
+                    className="w-full h-full object-contain p-4"
+                  />
+                ) : (
+                  <div className="text-center text-white/60">
+                    <Cpu size={64} className="mx-auto mb-4" />
+                    <p className="text-lg">{currentCase.title}</p>
+                  </div>
+                )}
                 
                 {/* Navigation Arrows */}
                 <button
