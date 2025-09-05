@@ -246,12 +246,12 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Featured Cases */}
-      <section className="py-16 px-6">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12 text-center">
+      <section className="py-11 px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl lg:text-3xl font-bold text-white mb-8 text-center">
             Featured Projects
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {featuredCases.map((caseStudy) => (
               <div 
                 key={caseStudy.id}
@@ -260,30 +260,30 @@ export default function CaseStudiesPage() {
                 onClick={() => setSelectedCase(caseStudy.id)}
                 data-testid={`card-featured-${caseStudy.id}`}
               >
-                <div className="h-40 bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
+                <div className="h-28 bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
                   {(caseStudy.title === 'Simuka Football Mobile App' || caseStudy.title === 'XP Eats Mobile App' || caseStudy.title === 'Crick Mobile App' || caseStudy.title === 'Skatey Mobile App' || caseStudy.title === 'England Cricket Board Mobile App') ? (
                     <img 
                       src={caseStudy.imageUrl} 
                       alt={caseStudy.title}
-                      className="w-full h-full object-contain p-2"
+                      className="w-full h-full object-contain p-1"
                     />
                   ) : (
-                    <Cpu size={40} className="text-white/60" />
+                    <Cpu size={28} className="text-white/60" />
                   )}
                 </div>
-                <div className="p-5">
-                  <span className="inline-block px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-sm mb-3">
+                <div className="p-4">
+                  <span className="inline-block px-2 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs mb-2">
                     {caseStudy.industry}
                   </span>
-                  <h3 className="text-xl font-bold text-white mb-2">{caseStudy.title}</h3>
-                  <p className="text-gray-300 mb-4 line-clamp-3">{caseStudy.description}</p>
-                  <div className="flex items-center gap-4 text-sm text-gray-400">
+                  <h3 className="text-lg font-bold text-white mb-2">{caseStudy.title}</h3>
+                  <p className="text-gray-300 mb-3 line-clamp-2 text-sm">{caseStudy.description}</p>
+                  <div className="flex items-center gap-3 text-xs text-gray-400">
                     <div className="flex items-center gap-1">
-                      <Clock size={16} />
+                      <Clock size={12} />
                       {caseStudy.projectDuration}
                     </div>
                     <div className="flex items-center gap-1">
-                      <Building size={16} />
+                      <Building size={12} />
                       {caseStudy.clientName}
                     </div>
                   </div>
