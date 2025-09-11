@@ -76,7 +76,7 @@ const caseStudies = [
     industry: 'Sports Entertainment',
     projectDuration: '7 months',
     clientName: 'Skatey Community',
-    imageUrl: '@assets/download (15)_1757603131584.jpg',
+    imageUrl: '/attached_assets/download (15)_1757603131584.jpg',
     featured: true
   },
   {
@@ -165,9 +165,10 @@ export default function CaseStudiesSlideshow() {
               <div className="relative h-67 lg:h-[350px] bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center overflow-hidden">
                 {currentCase.imageUrl ? (
                   <img 
-                    src={currentCase.imageUrl.startsWith('@assets/') ? currentCase.imageUrl.replace('@assets/', '/attached_assets/') : currentCase.imageUrl}
+                    src={currentCase.imageUrl}
                     alt={currentCase.title}
                     className="w-full h-full object-cover"
+                    onError={(e) => console.error('Image failed to load:', currentCase.imageUrl)}
                   />
                 ) : (
                   <div className="text-center text-white/60">
