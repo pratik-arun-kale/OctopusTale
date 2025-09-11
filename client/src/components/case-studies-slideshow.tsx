@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ExternalLink, Clock, Building, Cpu } from 'lucide-react';
 import { Link } from 'wouter';
+import skateyImage from '@/assets/skatey-image.jpg';
 
 // Sample case studies data - replace with your actual data from PowerPoint
 const caseStudies = [
@@ -76,7 +77,7 @@ const caseStudies = [
     industry: 'Sports Entertainment',
     projectDuration: '7 months',
     clientName: 'Skatey Community',
-    imageUrl: '/attached_assets/download (15)_1757603131584.jpg',
+    imageUrl: skateyImage,
     featured: true
   },
   {
