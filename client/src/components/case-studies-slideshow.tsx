@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight, ExternalLink, Clock, Building, Cpu } from 'l
 import { Link } from 'wouter';
 import skateyImage from '@/assets/skatey-image.jpg';
 import simukaImage from '@/assets/simuka-image.png';
+import xpEatsImage from '@/assets/xp-eats-image.png';
 
 // Sample case studies data - replace with your actual data from PowerPoint
 const caseStudies = [
@@ -48,7 +49,7 @@ const caseStudies = [
     industry: 'Social Impact Technology',
     projectDuration: '9 months',
     clientName: 'XP Eats Foundation',
-    imageUrl: '',
+    imageUrl: xpEatsImage,
     featured: true
   },
   {
