@@ -261,15 +261,7 @@ export default function CaseStudiesPage() {
                 data-testid={`card-featured-${caseStudy.id}`}
               >
                 <div className="h-28 bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
-                  {(caseStudy.title === 'Simuka Football Mobile App' || caseStudy.title === 'XP Eats Mobile App' || caseStudy.title === 'Crick Mobile App' || caseStudy.title === 'Skatey Mobile App' || caseStudy.title === 'England Cricket Board Mobile App') ? (
-                    <img 
-                      src={caseStudy.imageUrl} 
-                      alt={caseStudy.title}
-                      className="w-full h-full object-contain p-1"
-                    />
-                  ) : (
-                    <Cpu size={28} className="text-white/60" />
-                  )}
+                  <Cpu size={28} className="text-white/60" />
                 </div>
                 <div className="p-4">
                   <span className="inline-block px-2 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs mb-2">
