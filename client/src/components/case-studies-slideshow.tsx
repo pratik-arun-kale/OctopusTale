@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ExternalLink, Clock, Building, Cpu } from 'lucide-react';
 import { Link } from 'wouter';
 import skateyImage from '@/assets/skatey-image.jpg';
+import simukaImage from '@/assets/simuka-image.png';
 
 // Sample case studies data - replace with your actual data from PowerPoint
 const caseStudies = [
@@ -32,7 +33,7 @@ const caseStudies = [
     industry: 'Sports Entertainment',
     projectDuration: '6 months',
     clientName: 'Simuka Football',
-    imageUrl: '',
+    imageUrl: simukaImage,
     featured: true
   },
   {
