@@ -168,18 +168,10 @@ export default function CaseStudiesSlideshow() {
             <div className="grid lg:grid-cols-2 gap-0">
               {/* Image Section */}
               <div className="relative h-67 lg:h-[350px] bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
-                {(currentCase.title === 'Simuka Football Mobile App' || currentCase.title === 'XP Eats Mobile App' || currentCase.title === 'Crick Mobile App' || currentCase.title === 'Skatey Mobile App' || currentCase.title === 'England Cricket Board Mobile App') ? (
-                  <img 
-                    src={currentCase.imageUrl} 
-                    alt={currentCase.title}
-                    className="w-full h-full object-contain p-3"
-                  />
-                ) : (
-                  <div className="text-center text-white/60">
-                    <Cpu size={45} className="mx-auto mb-3" />
-                    <p className="text-base">{currentCase.title}</p>
-                  </div>
-                )}
+                <div className="text-center text-white/60">
+                  <Cpu size={45} className="mx-auto mb-3" />
+                  <p className="text-base">{currentCase.title}</p>
+                </div>
                 
                 {/* Navigation Arrows */}
                 <button

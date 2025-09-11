@@ -309,15 +309,7 @@ export default function CaseStudiesPage() {
               >
                 <div className="grid lg:grid-cols-3 gap-0">
                   <div className="h-45 lg:h-auto bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
-                    {(caseStudy.title === 'Simuka Football Mobile App' || caseStudy.title === 'XP Eats Mobile App' || caseStudy.title === 'Crick Mobile App' || caseStudy.title === 'Skatey Mobile App' || caseStudy.title === 'England Cricket Board Mobile App') ? (
-                      <img 
-                        src={caseStudy.imageUrl} 
-                        alt={caseStudy.title}
-                        className="w-full h-full object-contain p-3"
-                      />
-                    ) : (
-                      <Cpu size={45} className="text-white/60" />
-                    )}
+                    <Cpu size={45} className="text-white/60" />
                   </div>
                   <div className="lg:col-span-2 p-5">
                     <div className="flex items-start justify-between mb-3">
