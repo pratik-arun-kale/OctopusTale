@@ -1,11 +1,6 @@
 import { useState } from 'react';
 import { ChevronDown, Clock, Building, Cpu, Target, Lightbulb, TrendingUp, Filter, Search } from 'lucide-react';
 import { Link } from 'wouter';
-import simukaMobileApp from '@assets/image_1757565161170.png';
-import xpEatsApp from '@assets/image_1757070528679.png';
-import crickApp from '@assets/image_1757070577706.png';
-import skateyApp from '@assets/image_1757070649510.png';
-import ecbApp from '@assets/image_1757070763558.png';
 
 // Sample case studies data - replace with your actual data from PowerPoint
 const allCaseStudies = [
@@ -21,7 +16,7 @@ const allCaseStudies = [
     industry: 'Sports Technology',
     projectDuration: '10 months',
     clientName: 'England and Wales Cricket Board',
-    imageUrl: ecbApp,
+    imageUrl: '',
     featured: true
   },
   {
@@ -51,7 +46,7 @@ const allCaseStudies = [
     industry: 'Sports Entertainment',
     projectDuration: '6 months',
     clientName: 'Simuka Football',
-    imageUrl: simukaMobileApp,
+    imageUrl: '',
     featured: true
   },
   {
@@ -66,7 +61,7 @@ const allCaseStudies = [
     industry: 'Social Impact Technology',
     projectDuration: '9 months',
     clientName: 'XP Eats Foundation',
-    imageUrl: xpEatsApp,
+    imageUrl: '',
     featured: true
   },
   {
@@ -81,7 +76,7 @@ const allCaseStudies = [
     industry: 'Sports Technology',
     projectDuration: '11 months',
     clientName: 'Cricket Academy International',
-    imageUrl: crickApp,
+    imageUrl: '',
     featured: true
   },
   {
@@ -96,7 +91,7 @@ const allCaseStudies = [
     industry: 'Sports Entertainment',
     projectDuration: '7 months',
     clientName: 'Skatey Community',
-    imageUrl: skateyApp,
+    imageUrl: '',
     featured: false
   },
   {
