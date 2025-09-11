@@ -63,8 +63,7 @@ export default {
         },
       },
       fontFamily: {
-        inter: ["Inter", "sans-serif"],
-        sans: ["Source Sans Pro", "sans-serif"],
+        sans: ["var(--font-sans)"],
         serif: ["var(--font-serif)"],
         mono: ["var(--font-mono)"],
       },
