@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ExternalLink, Clock, Building, Cpu } from 'lucide-react';
 import { Link } from 'wouter';
-import simukaMobileApp from '@assets/image_1757070402980.png';
+import simukaMobileApp from '@assets/image_1757565161170.png';
 import xpEatsApp from '@assets/image_1757070528679.png';
 import crickApp from '@assets/image_1757070577706.png';
 import skateyApp from '@assets/image_1757070649510.png';
