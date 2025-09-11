@@ -1,5 +1,5 @@
 import { Building2, CheckCircle, Cloud, Zap } from "lucide-react";
-import heroGif from "@assets/gen-Ai-File-c5124ebe53-unscreen_1756564970348.gif";
+import heroGif from "@assets/gen-Ai-File-c5124ebe53-unscreen_1757566271508.gif";
 
 const Hero = () => {
   return (
