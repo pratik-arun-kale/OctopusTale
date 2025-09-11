@@ -93,6 +93,21 @@ const caseStudies = [
     clientName: 'International Gaming Company',
     imageUrl: '/placeholder-betting.jpg',
     featured: true
+  },
+  {
+    id: '7',
+    title: 'Automated Stadium Management System',
+    subtitle: 'Smart Venue Operations',
+    description: 'Comprehensive stadium management platform automating operations, security, and fan experience across large-scale sports venues.',
+    challenge: 'Modern stadiums needed integrated systems to manage complex operations including crowd control, security monitoring, facility management, and real-time analytics.',
+    solution: 'Developed an IoT-integrated platform with automated crowd monitoring, predictive maintenance, energy management, security protocols, and real-time operational dashboards.',
+    results: '45% reduction in operational costs, 60% improvement in security response time, enhanced fan experience with automated services, optimized energy consumption.',
+    technologies: ['React', 'Node.js', 'IoT Integration', 'Machine Learning', 'PostgreSQL', 'Real-time Analytics'],
+    industry: 'Smart Infrastructure',
+    projectDuration: '14 months',
+    clientName: 'Metropolitan Stadium Authority',
+    imageUrl: '',
+    featured: true
   }
 ];
 

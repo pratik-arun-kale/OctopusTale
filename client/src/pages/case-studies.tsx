@@ -95,7 +95,7 @@ const allCaseStudies = [
     featured: true
   },
   {
-    id: '4',
+    id: '7',
     title: 'Automated Stadium Management System',
     subtitle: 'Smart Venue Operations',
     description: 'IoT-enabled stadium management system optimizing operations, energy consumption, and visitor experience through intelligent automation.',
@@ -107,10 +107,10 @@ const allCaseStudies = [
     projectDuration: '10 months',
     clientName: 'Metropolitan Stadium Authority',
     imageUrl: '/placeholder-iot.jpg',
-    featured: false
+    featured: true
   },
   {
-    id: '5',
+    id: '8',
     title: 'E-Sports Tournament Platform',
     subtitle: 'Global Gaming Competitions',
     description: 'Comprehensive platform for organizing, streaming, and managing e-sports tournaments with integrated payment systems and global audience engagement.',
@@ -125,7 +125,7 @@ const allCaseStudies = [
     featured: false
   },
   {
-    id: '6',
+    id: '9',
     title: 'Sports Health Monitoring Wearables',
     subtitle: 'Athlete Performance Tracking',
     description: 'Advanced wearable technology platform monitoring athlete health metrics, injury prevention, and performance optimization in real-time.',
