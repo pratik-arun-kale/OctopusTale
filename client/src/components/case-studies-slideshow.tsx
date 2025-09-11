@@ -76,7 +76,7 @@ const caseStudies = [
     industry: 'Sports Entertainment',
     projectDuration: '7 months',
     clientName: 'Skatey Community',
-    imageUrl: '',
+    imageUrl: '@assets/download (15)_1757603131584.jpg',
     featured: false
   },
   {
@@ -162,11 +162,19 @@ export default function CaseStudiesSlideshow() {
           >
             <div className="grid lg:grid-cols-2 gap-0">
               {/* Image Section */}
-              <div className="relative h-67 lg:h-[350px] bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
-                <div className="text-center text-white/60">
-                  <Cpu size={45} className="mx-auto mb-3" />
-                  <p className="text-base">{currentCase.title}</p>
-                </div>
+              <div className="relative h-67 lg:h-[350px] bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center overflow-hidden">
+                {currentCase.imageUrl ? (
+                  <img 
+                    src={currentCase.imageUrl.startsWith('@assets/') ? currentCase.imageUrl.replace('@assets/', '/attached_assets/') : currentCase.imageUrl}
+                    alt={currentCase.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="text-center text-white/60">
+                    <Cpu size={45} className="mx-auto mb-3" />
+                    <p className="text-base">{currentCase.title}</p>
+                  </div>
+                )}
                 
                 {/* Navigation Arrows */}
                 <button
