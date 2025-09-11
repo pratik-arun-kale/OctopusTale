@@ -77,7 +77,7 @@ const caseStudies = [
     projectDuration: '7 months',
     clientName: 'Skatey Community',
     imageUrl: '@assets/download (15)_1757603131584.jpg',
-    featured: false
+    featured: true
   },
   {
     id: '6',
