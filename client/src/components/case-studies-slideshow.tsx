@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ExternalLink, Clock, Building, Cpu } from 'lucide-react';
 import { Link } from 'wouter';
-import skateyImage from '@/assets/skatey-image.jpg';
-import simukaImage from '@/assets/simuka-image.png';
-import xpEatsImage from '@/assets/xp-eats-image.png';
+import skateyImage from '@/assets/images/Skatey_Mobile_App_1757690069285.webp';
+import simukaImage from '@/assets/images/Simuka_Football_1757690069285.webp';
+import xpEatsImage from '@/assets/images/KasiD_1757690069284.webp';
+import cloudBettingImage from '@/assets/images/Cloud_Based_Betting_Platform_1757690069282.webp';
+import eSportsImage from '@/assets/images/E_Sports_Tournament_Platform_1757690069283.webp';
 
 // Sample case studies data - replace with your actual data from PowerPoint
 const caseStudies = [
@@ -19,7 +21,7 @@ const caseStudies = [
     industry: 'Sports Technology',
     projectDuration: '8 months',
     clientName: 'Professional Sports League',
-    imageUrl: '/placeholder-analytics.jpg',
+    imageUrl: '',
     featured: true
   },
   {
@@ -94,7 +96,7 @@ const caseStudies = [
     industry: 'Gaming & Betting',
     projectDuration: '12 months',
     clientName: 'International Gaming Company',
-    imageUrl: '/placeholder-betting.jpg',
+    imageUrl: cloudBettingImage,
     featured: true
   },
   {
@@ -167,12 +169,15 @@ export default function CaseStudiesSlideshow() {
               {/* Image Section */}
               <div className="relative h-67 lg:h-[350px] bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center overflow-hidden">
                 {currentCase.imageUrl ? (
-                  <img 
-                    src={currentCase.imageUrl}
-                    alt={currentCase.title}
-                    className="w-full h-full object-cover"
-                    onError={(e) => console.error('Image failed to load:', currentCase.imageUrl)}
-                  />
+                  <div className="w-full h-full">
+                    <img 
+                      src={currentCase.imageUrl}
+                      alt={`${currentCase.title} - ${currentCase.subtitle} showcasing ${currentCase.industry} technology solution`}
+                      className="w-full h-full object-cover object-center"
+                      loading="lazy"
+                      onError={(e) => console.error('Image failed to load:', currentCase.imageUrl)}
+                    />
+                  </div>
                 ) : (
                   <div className="text-center text-white/60">
                     <Cpu size={45} className="mx-auto mb-3" />

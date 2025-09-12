@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import { ChevronDown, Clock, Building, Cpu, Target, Lightbulb, TrendingUp, Filter, Search } from 'lucide-react';
 import { Link } from 'wouter';
+import skateyImage from '@/assets/images/Skatey_Mobile_App_1757690069285.webp';
+import simukaImage from '@/assets/images/Simuka_Football_1757690069285.webp';
+import xpEatsImage from '@/assets/images/KasiD_1757690069284.webp';
+import cloudBettingImage from '@/assets/images/Cloud_Based_Betting_Platform_1757690069282.webp';
+import eSportsImage from '@/assets/images/E_Sports_Tournament_Platform_1757690069283.webp';
 
 // Sample case studies data - replace with your actual data from PowerPoint
 const allCaseStudies = [
@@ -16,7 +21,7 @@ const allCaseStudies = [
     industry: 'Sports Technology',
     projectDuration: '8 months',
     clientName: 'Professional Sports League',
-    imageUrl: '/placeholder-analytics.jpg',
+    imageUrl: '',
     featured: true
   },
   {
@@ -31,7 +36,7 @@ const allCaseStudies = [
     industry: 'Sports Entertainment',
     projectDuration: '6 months',
     clientName: 'Simuka Football',
-    imageUrl: '',
+    imageUrl: simukaImage,
     featured: true
   },
   {
@@ -46,7 +51,7 @@ const allCaseStudies = [
     industry: 'Social Impact Technology',
     projectDuration: '9 months',
     clientName: 'XP Eats Foundation',
-    imageUrl: '',
+    imageUrl: xpEatsImage,
     featured: true
   },
   {
@@ -76,7 +81,7 @@ const allCaseStudies = [
     industry: 'Sports Entertainment',
     projectDuration: '7 months',
     clientName: 'Skatey Community',
-    imageUrl: '',
+    imageUrl: skateyImage,
     featured: false
   },
   {
@@ -91,7 +96,7 @@ const allCaseStudies = [
     industry: 'Gaming & Betting',
     projectDuration: '12 months',
     clientName: 'International Gaming Company',
-    imageUrl: '/placeholder-betting.jpg',
+    imageUrl: cloudBettingImage,
     featured: true
   },
   {
@@ -106,7 +111,7 @@ const allCaseStudies = [
     industry: 'Smart Infrastructure',
     projectDuration: '10 months',
     clientName: 'Metropolitan Stadium Authority',
-    imageUrl: '/placeholder-iot.jpg',
+    imageUrl: '',
     featured: true
   },
   {
@@ -121,7 +126,7 @@ const allCaseStudies = [
     industry: 'E-Sports',
     projectDuration: '7 months',
     clientName: 'Global Gaming Network',
-    imageUrl: '/placeholder-esports.jpg',
+    imageUrl: eSportsImage,
     featured: false
   },
   {
@@ -136,7 +141,7 @@ const allCaseStudies = [
     industry: 'Sports Health Tech',
     projectDuration: '14 months',
     clientName: 'Sports Medicine Institute',
-    imageUrl: '/placeholder-wearables.jpg',
+    imageUrl: '',
     featured: false
   }
 ];
@@ -240,8 +245,19 @@ export default function CaseStudiesPage() {
                 onClick={() => setSelectedCase(caseStudy.id)}
                 data-testid={`card-featured-${caseStudy.id}`}
               >
-                <div className="h-28 bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
-                  <Cpu size={28} className="text-white/60" />
+                <div className="relative h-28 bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center overflow-hidden">
+                  {caseStudy.imageUrl ? (
+                    <div className="w-full h-full">
+                      <img 
+                        src={caseStudy.imageUrl}
+                        alt={`${caseStudy.title} - ${caseStudy.subtitle} showcasing ${caseStudy.industry} technology solution`}
+                        className="w-full h-full object-cover object-center"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : (
+                    <Cpu size={28} className="text-white/60" />
+                  )}
                 </div>
                 <div className="p-4">
                   <span className="inline-block px-2 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs mb-2">
@@ -280,8 +296,19 @@ export default function CaseStudiesPage() {
                 style={{ backgroundColor: '#17161A' }}
               >
                 <div className="grid lg:grid-cols-3 gap-0">
-                  <div className="h-45 lg:h-auto bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
-                    <Cpu size={45} className="text-white/60" />
+                  <div className="relative h-45 lg:h-auto bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center overflow-hidden">
+                    {caseStudy.imageUrl ? (
+                      <div className="w-full h-full">
+                        <img 
+                          src={caseStudy.imageUrl}
+                          alt={`${caseStudy.title} - ${caseStudy.subtitle} showcasing ${caseStudy.industry} technology solution for ${caseStudy.clientName}`}
+                          className="w-full h-full object-cover object-center"
+                          loading="lazy"
+                        />
+                      </div>
+                    ) : (
+                      <Cpu size={45} className="text-white/60" />
+                    )}
                   </div>
                   <div className="lg:col-span-2 p-5">
                     <div className="flex items-start justify-between mb-3">
