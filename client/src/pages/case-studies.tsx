@@ -6,6 +6,9 @@ import simukaImage from '@/assets/images/Simuka_Football_1757690069285.webp';
 import xpEatsImage from '@/assets/images/KasiD_1757690069284.webp';
 import cloudBettingImage from '@/assets/images/Cloud_Based_Betting_Platform_1757690069282.webp';
 import eSportsImage from '@/assets/images/E_Sports_Tournament_Platform_1757690069283.webp';
+import aiAnalyticsImage from '@/assets/images/AI-Powered Sports Analytics Platform_1758107129270.webp';
+import stadiumManagementImage from '@/assets/images/Automated Stadium Management System_1758107129271.webp';
+import wearablesImage from '@/assets/images/Sports Health Monitoring Wearables_1758107129272.webp';
 
 // Sample case studies data - replace with your actual data from PowerPoint
 const allCaseStudies = [
@@ -21,7 +24,7 @@ const allCaseStudies = [
     industry: 'Sports Technology',
     projectDuration: '8 months',
     clientName: 'Professional Sports League',
-    imageUrl: '',
+    imageUrl: aiAnalyticsImage,
     featured: true
   },
   {
@@ -111,7 +114,7 @@ const allCaseStudies = [
     industry: 'Smart Infrastructure',
     projectDuration: '10 months',
     clientName: 'Metropolitan Stadium Authority',
-    imageUrl: '',
+    imageUrl: stadiumManagementImage,
     featured: true
   },
   {
@@ -141,7 +144,7 @@ const allCaseStudies = [
     industry: 'Sports Health Tech',
     projectDuration: '14 months',
     clientName: 'Sports Medicine Institute',
-    imageUrl: '',
+    imageUrl: wearablesImage,
     featured: false
   }
 ];
