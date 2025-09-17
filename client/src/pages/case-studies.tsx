@@ -45,7 +45,7 @@ const allCaseStudies = [
   },
   {
     id: '3',
-    title: 'XP Eats Mobile App',
+    title: 'KASID Food Platform',
     subtitle: 'Mobile Meal Gifting Platform',
     description: 'Innovative platform connecting donors with local suppliers for gifting meals and products to those in need, streamlining generosity and minimizing waste.',
     challenge: 'Traditional charity systems lacked transparency and efficient meal distribution, making it difficult for donors to verify their contributions reached those in need. Food waste was a significant issue with poor coordination between suppliers and charities.',
@@ -54,7 +54,7 @@ const allCaseStudies = [
     technologies: ['React Native', 'Node.js', 'PostgreSQL', 'Stripe', 'Google Maps API', 'Firebase', 'WebRTC'],
     industry: 'Social Impact Technology',
     projectDuration: '9 months',
-    clientName: 'XP Eats Foundation',
+    clientName: 'KASID Foundation',
     imageUrl: xpEatsImage,
     featured: true
   },
