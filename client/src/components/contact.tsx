@@ -4,8 +4,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
 
 interface ContactFormData {
   name: string;
@@ -21,26 +19,7 @@ const Contact = () => {
   });
   const { toast } = useToast();
 
-  const submitContactForm = useMutation({
-    mutationFn: async (data: ContactFormData) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
-    },
-    onSuccess: (data) => {
-      toast({
-        title: "Success!",
-        description: data.message || "Thank you for your message! We will get back to you soon.",
-      });
-      setFormData({ name: "", email: "", message: "" });
-    },
-    onError: (error: any) => {
-      toast({
-        title: "Error",
-        description: error.message || "Failed to submit form. Please try again.",
-        variant: "destructive",
-      });
-    },
-  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -57,7 +36,21 @@ const Contact = () => {
       });
       return;
     }
-    submitContactForm.mutate(formData);
+    // Dummy submission - simulate processing
+    setIsSubmitting(true);
+    
+    // Log the form data for demo purposes
+    console.log('Contact form submitted:', formData);
+    
+    // Simulate async submission with a brief delay
+    setTimeout(() => {
+      setIsSubmitting(false);
+      toast({
+        title: "Success!",
+        description: "Thank you for your message! We will get back to you soon.",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    }, 1000);
   };
 
   return (
@@ -125,11 +118,11 @@ const Contact = () => {
             <div className="text-center">
               <Button
                 type="submit"
-                disabled={submitContactForm.isPending}
+                disabled={isSubmitting}
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-medium hover:from-blue-600 hover:to-purple-700 hover:scale-105 focus:ring-4 focus:ring-blue-400 focus:ring-opacity-50 transition-all duration-300 disabled:opacity-50 disabled:hover:scale-100"
                 data-testid="button-submit"
               >
-                {submitContactForm.isPending ? "Sending..." : "Send Message"}
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </div>
           </form>

@@ -2,16 +2,6 @@
 // This file centralizes all environment variable usage
 
 export const config = {
-  // Database Configuration
-  database: {
-    url: process.env.DATABASE_URL || '',
-    host: process.env.PGHOST || 'localhost',
-    port: parseInt(process.env.PGPORT || '5432'),
-    user: process.env.PGUSER || '',
-    password: process.env.PGPASSWORD || '',
-    database: process.env.PGDATABASE || '',
-  },
-
   // Application URLs
   app: {
     baseUrl: process.env.BASE_URL || 'http://localhost:5000',
@@ -44,9 +34,8 @@ export const config = {
 
 // Validation function to check required environment variables
 export function validateConfig() {
-  const required = [
+  const required: string[] = [
     // Add required environment variables here
-    // 'DATABASE_URL',
     // 'SESSION_SECRET',
   ];
 
@@ -57,17 +46,3 @@ export function validateConfig() {
   }
 }
 
-// Helper function to get database connection string
-export function getDatabaseUrl(): string {
-  if (config.database.url) {
-    return config.database.url;
-  }
-  
-  // Construct from individual components if DATABASE_URL not provided
-  const { host, port, user, password, database } = config.database;
-  if (user && password && host && database) {
-    return `postgresql://${user}:${password}@${host}:${port}/${database}`;
-  }
-  
-  return '';
-}

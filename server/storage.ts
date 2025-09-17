@@ -1,48 +1,28 @@
-import { type User, type InsertUser, type ContactSubmission, type InsertContactSubmission } from "@shared/schema";
-import { randomUUID } from "crypto";
+// Simple in-memory storage implementation
+// This replaces the previous database-dependent storage
 
-export interface IStorage {
-  getUser(id: string): Promise<User | undefined>;
-  getUserByUsername(username: string): Promise<User | undefined>;
-  createUser(user: InsertUser): Promise<User>;
-  createContactSubmission(submission: InsertContactSubmission): Promise<ContactSubmission>;
+export interface ContactFormData {
+  name: string;
+  email: string;
+  message: string;
 }
 
-export class MemStorage implements IStorage {
-  private users: Map<string, User>;
-  private contactSubmissions: Map<string, ContactSubmission>;
+export class MemStorage {
+  private contactSubmissions: ContactFormData[];
 
   constructor() {
-    this.users = new Map();
-    this.contactSubmissions = new Map();
+    this.contactSubmissions = [];
   }
 
-  async getUser(id: string): Promise<User | undefined> {
-    return this.users.get(id);
+  // Simple method to store contact submissions in memory (for demo purposes)
+  saveContactSubmission(submission: ContactFormData): void {
+    this.contactSubmissions.push(submission);
+    console.log('Contact submission received:', submission);
   }
 
-  async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
-    );
-  }
-
-  async createUser(insertUser: InsertUser): Promise<User> {
-    const id = randomUUID();
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
-    return user;
-  }
-
-  async createContactSubmission(insertSubmission: InsertContactSubmission): Promise<ContactSubmission> {
-    const id = randomUUID();
-    const submission: ContactSubmission = { 
-      ...insertSubmission, 
-      id, 
-      createdAt: new Date() 
-    };
-    this.contactSubmissions.set(id, submission);
-    return submission;
+  // Get all submissions (for debugging)
+  getAllSubmissions(): ContactFormData[] {
+    return this.contactSubmissions;
   }
 }
 
