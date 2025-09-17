@@ -8,6 +8,7 @@ import cloudBettingImage from '@/assets/images/Cloud_Based_Betting_Platform_1757
 import eSportsImage from '@/assets/images/E_Sports_Tournament_Platform_1757690069283.webp';
 import aiAnalyticsImage from '@/assets/images/AI-Powered Sports Analytics Platform_1758107129270.webp';
 import stadiumManagementImage from '@/assets/images/Automated Stadium Management System_1758107129271.webp';
+import crickImage from '@/assets/images/Crick Mobile App_1758107662222.webp';
 
 // Sample case studies data - replace with your actual data from PowerPoint
 const caseStudies = [
@@ -68,7 +69,7 @@ const caseStudies = [
     industry: 'Sports Technology',
     projectDuration: '11 months',
     clientName: 'Cricket Academy International',
-    imageUrl: '',
+    imageUrl: crickImage,
     featured: true
   },
   {
