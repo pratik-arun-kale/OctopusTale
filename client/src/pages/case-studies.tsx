@@ -3,7 +3,7 @@ import { ChevronDown, Clock, Building, Cpu, Target, Lightbulb, TrendingUp, Filte
 import { Link } from 'wouter';
 import skateyImage from '@/assets/images/Skatey_Mobile_App_1757690069285.webp';
 import simukaImage from '@/assets/images/Simuka_Football_1757690069285.webp';
-import xpEatsImage from '@/assets/images/KasiD_1757690069284.webp';
+import kasidImage from '@/assets/images/KASID Food Platform_1758108034668.webp';
 import cloudBettingImage from '@/assets/images/Cloud_Based_Betting_Platform_1757690069282.webp';
 import eSportsImage from '@/assets/images/E_Sports_Tournament_Platform_1757690069283.webp';
 import aiAnalyticsImage from '@/assets/images/AI-Powered Sports Analytics Platform_1758107129270.webp';
@@ -55,7 +55,7 @@ const allCaseStudies = [
     industry: 'Social Impact Technology',
     projectDuration: '9 months',
     clientName: 'KASID Foundation',
-    imageUrl: xpEatsImage,
+    imageUrl: kasidImage,
     featured: true
   },
   {
