@@ -12,6 +12,10 @@ This is a fully static web application for Tales (Octopus Tale), a sports techno
   - Footer logo (108px height) provides brand consistency
   - All pages (Home, About, Case Studies) now use shared Header component with logo
   - Logo sizes increased by 125% from original implementation (40px → 90px header, 48px → 108px footer)
+- **LinkedIn Integration**: Added LinkedIn profile link to footer
+  - Links to https://www.linkedin.com/in/prashanthiyer
+  - Features LinkedIn icon with hover effects
+  - Opens in new tab with security attributes
 - **Database Dependencies Removed**: Fully static site with no database requirements
   - Removed all Drizzle ORM, PostgreSQL, and Neon Database dependencies
   - Contact form now uses dummy submission with console logging

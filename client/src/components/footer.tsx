@@ -1,4 +1,5 @@
 import logoImage from "@assets/WhatsApp Image 2025-11-04 at 9.16.02 PM-Photoroom_1762316573699.png";
+import { Linkedin } from "lucide-react";
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -101,8 +102,20 @@ const Footer = () => {
             </div>
           </div>
           
-          <div className="border-t border-white/10 mt-8 pt-8 text-center text-gray-400">
-            <p data-testid="footer-copyright">&copy; 2024 Tales. All rights reserved.</p>
+          <div className="border-t border-white/10 mt-8 pt-8">
+            <div className="flex flex-col items-center gap-4">
+              <a 
+                href="https://www.linkedin.com/in/prashanthiyer" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors group"
+                data-testid="footer-linkedin"
+              >
+                <Linkedin className="w-6 h-6 group-hover:scale-110 transition-transform" />
+                <span className="text-sm font-medium">Connect on LinkedIn</span>
+              </a>
+              <p className="text-gray-400" data-testid="footer-copyright">&copy; 2024 Tales. All rights reserved.</p>
+            </div>
           </div>
         </div>
       </div>
