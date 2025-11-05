@@ -166,6 +166,9 @@ export default function CaseStudiesPage() {
     const projectId = params.get('project');
     
     if (projectId) {
+      // Reset filters to ensure the target case study is visible
+      setSearchTerm('');
+      setSelectedIndustry('All');
       // Set the selected case to open it
       setSelectedCase(projectId);
       
@@ -173,11 +176,48 @@ export default function CaseStudiesPage() {
       setTimeout(() => {
         const element = caseRefs.current[projectId];
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          // Use double requestAnimationFrame for stable layout measurement
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              // First, scroll element into view centered
+              element.scrollIntoView({ behavior: 'auto', block: 'center' });
+              
+              // Then adjust for fixed header by scrolling up slightly
+              const headerAdjustment = 40; // Half of header height for visual balance
+              window.scrollBy({ top: -headerAdjustment, behavior: 'auto' });
+            });
+          });
         }
       }, 300);
     }
   }, [location]);
+
+  // Handler for clicking featured projects - scroll to and expand the case study
+  const handleFeaturedClick = (caseId: string) => {
+    // Reset filters to ensure the target case study is visible
+    setSearchTerm('');
+    setSelectedIndustry('All');
+    setSelectedCase(caseId);
+    
+    // Scroll to the case study in the All Cases section
+    // Longer delay to allow DOM to update with filter reset and expansion
+    setTimeout(() => {
+      const element = caseRefs.current[caseId];
+      if (element) {
+        // Use double requestAnimationFrame for stable layout measurement
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            // First, scroll element into view centered
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Then adjust for fixed header by scrolling up slightly
+            const headerAdjustment = 40; // Half of header height for visual balance
+            window.scrollBy({ top: -headerAdjustment, behavior: 'smooth' });
+          });
+        });
+      }
+    }, 300);
+  };
 
   const filteredCases = allCaseStudies.filter(caseStudy => {
     const matchesIndustry = selectedIndustry === 'All' || caseStudy.industry === selectedIndustry;
@@ -248,7 +288,7 @@ export default function CaseStudiesPage() {
                 key={caseStudy.id}
                 className="backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"
                 style={{ backgroundColor: '#17161A' }}
-                onClick={() => setSelectedCase(caseStudy.id)}
+                onClick={() => handleFeaturedClick(caseStudy.id)}
                 data-testid={`card-featured-${caseStudy.id}`}
               >
                 <div className="relative h-28 bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center overflow-hidden">
