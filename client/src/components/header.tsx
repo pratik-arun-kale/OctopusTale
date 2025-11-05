@@ -49,7 +49,7 @@ const Header = () => {
               <img 
                 src={logoImage} 
                 alt="Octopus Tale" 
-                className="h-[60px] w-auto"
+                className="h-[90px] w-auto"
                 data-testid="logo"
               />
             </button>

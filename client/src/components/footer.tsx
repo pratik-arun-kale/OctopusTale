@@ -17,7 +17,7 @@ const Footer = () => {
               <img 
                 src={logoImage} 
                 alt="Octopus Tale" 
-                className="h-[72px] w-auto mb-4"
+                className="h-[108px] w-auto mb-4"
                 data-testid="footer-logo"
               />
               <p className="text-gray-300 leading-relaxed" data-testid="footer-description">
