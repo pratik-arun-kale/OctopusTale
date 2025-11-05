@@ -14,10 +14,10 @@ This is a fully static web application for Tales (Octopus Tale), a sports techno
   - Logo sizes increased by 125% from original implementation (40px → 90px header, 48px → 108px footer)
 - **Contact Information in Footer**: 
   - Added company address: 104 Artesa Unit L, Romania Street, Ontario Canada
-  - Address displayed with MapPin icon for visual clarity
-  - LinkedIn profile link: https://www.linkedin.com/in/prashanthiyer
+  - Address displayed with MapPin icon in footer bottom section
+  - LinkedIn profile link added to Company section (after Contact)
+  - LinkedIn URL: https://www.linkedin.com/in/prashanthiyer
   - LinkedIn features icon with hover effects, opens in new tab
-  - Responsive layout: horizontal on desktop, stacked on mobile
 - **Database Dependencies Removed**: Fully static site with no database requirements
   - Removed all Drizzle ORM, PostgreSQL, and Neon Database dependencies
   - Contact form now uses dummy submission with console logging

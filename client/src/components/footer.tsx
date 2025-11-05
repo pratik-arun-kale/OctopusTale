@@ -98,6 +98,18 @@ const Footer = () => {
                   Contact
                 </button>
               </li>
+              <li>
+                <a 
+                  href="https://www.linkedin.com/in/prashanthiyer" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors flex items-center gap-2 group"
+                  data-testid="footer-link-linkedin"
+                >
+                  <Linkedin className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                  LinkedIn
+                </a>
+              </li>
             </ul>
             </div>
           </div>
@@ -112,19 +124,7 @@ const Footer = () => {
                 </div>
               </div>
               
-              <div className="flex flex-col items-center gap-4">
-                <a 
-                  href="https://www.linkedin.com/in/prashanthiyer" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors group"
-                  data-testid="footer-linkedin"
-                >
-                  <Linkedin className="w-6 h-6 group-hover:scale-110 transition-transform" />
-                  <span className="text-sm font-medium">Connect on LinkedIn</span>
-                </a>
-                <p className="text-gray-400 text-sm" data-testid="footer-copyright">&copy; 2024 Tales. All rights reserved.</p>
-              </div>
+              <p className="text-gray-400 text-sm" data-testid="footer-copyright">&copy; 2024 Tales. All rights reserved.</p>
               
               <div className="md:w-[200px]"></div>
             </div>
