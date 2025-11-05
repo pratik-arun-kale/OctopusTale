@@ -1,0 +1,8 @@
+node_modules
+server
+.replit
+.upm
+.config
+replit.nix
+*.log
+.DS_Store
