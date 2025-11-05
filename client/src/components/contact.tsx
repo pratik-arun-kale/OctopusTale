@@ -1,57 +1,32 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
-
-interface ContactFormData {
-  name: string;
-  email: string;
-  message: string;
-}
+import { Mail, Phone, Linkedin } from "lucide-react";
 
 const Contact = () => {
-  const [formData, setFormData] = useState<ContactFormData>({
-    name: "",
-    email: "",
-    message: ""
-  });
-  const { toast } = useToast();
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: "Validation Error",
-        description: "Please fill in all required fields.",
-        variant: "destructive",
-      });
-      return;
+  const contactMethods = [
+    {
+      icon: Mail,
+      label: "Email",
+      value: "Prashanth@octopustale.co.in",
+      href: "mailto:Prashanth@octopustale.co.in",
+      testId: "link-email",
+      description: "Send us an email"
+    },
+    {
+      icon: Phone,
+      label: "Call",
+      value: "+1 (343) 254-1255",
+      href: "tel:+13432541255",
+      testId: "link-call",
+      description: "Give us a call"
+    },
+    {
+      icon: Linkedin,
+      label: "LinkedIn",
+      value: "Connect on LinkedIn",
+      href: "https://www.linkedin.com/in/your-profile",
+      testId: "link-linkedin",
+      description: "Connect with us"
     }
-    // Dummy submission - simulate processing
-    setIsSubmitting(true);
-    
-    // Log the form data for demo purposes
-    console.log('Contact form submitted:', formData);
-    
-    // Simulate async submission with a brief delay
-    setTimeout(() => {
-      setIsSubmitting(false);
-      toast({
-        title: "Success!",
-        description: "Thank you for your message! We will get back to you soon.",
-      });
-      setFormData({ name: "", email: "", message: "" });
-    }, 1000);
-  };
+  ];
 
   return (
     <section id="contact" className="py-16 lg:py-24" data-testid="contact-section">
@@ -61,71 +36,31 @@ const Contact = () => {
           <p className="text-lg text-gray-300" data-testid="contact-subtitle">Ready to transform your sports technology? Let's talk.</p>
         </div>
         
-        <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-2xl p-8 lg:p-12 hover:bg-white/15 transition-all duration-300" data-testid="contact-form-container">
-          <form onSubmit={handleSubmit} className="space-y-6" data-testid="contact-form">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <Label htmlFor="name" className="block text-sm font-medium text-gray-200 mb-2">
-                  Full Name
-                </Label>
-                <Input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-all placeholder-gray-300"
-                  placeholder="Your full name"
-                  required
-                  data-testid="input-name"
-                />
-              </div>
-              <div>
-                <Label htmlFor="email" className="block text-sm font-medium text-gray-200 mb-2">
-                  Email Address
-                </Label>
-                <Input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-all placeholder-gray-300"
-                  placeholder="your@email.com"
-                  required
-                  data-testid="input-email"
-                />
-              </div>
-            </div>
-            
-            <div>
-              <Label htmlFor="message" className="block text-sm font-medium text-gray-200 mb-2">
-                Message
-              </Label>
-              <Textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleInputChange}
-                rows={5}
-                className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-all resize-vertical placeholder-gray-300"
-                placeholder="Tell us about your project..."
-                required
-                data-testid="textarea-message"
-              />
-            </div>
-            
-            <div className="text-center">
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-medium hover:from-blue-600 hover:to-purple-700 hover:scale-105 focus:ring-4 focus:ring-blue-400 focus:ring-opacity-50 transition-all duration-300 disabled:opacity-50 disabled:hover:scale-100"
-                data-testid="button-submit"
+        <div className="grid md:grid-cols-3 gap-6">
+          {contactMethods.map((method) => {
+            const IconComponent = method.icon;
+            return (
+              <a
+                key={method.label}
+                href={method.href}
+                target={method.label === "LinkedIn" ? "_blank" : undefined}
+                rel={method.label === "LinkedIn" ? "noopener noreferrer" : undefined}
+                className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-2xl p-8 hover:bg-white/15 hover:scale-105 transition-all duration-300 group"
+                data-testid={method.testId}
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
-              </Button>
-            </div>
-          </form>
+                <div className="flex flex-col items-center text-center space-y-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center group-hover:from-blue-600 group-hover:to-purple-700 transition-all duration-300">
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{method.label}</h3>
+                    <p className="text-sm text-gray-300 mb-1">{method.description}</p>
+                    <p className="text-sm text-blue-400 font-medium break-all">{method.value}</p>
+                  </div>
+                </div>
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>
