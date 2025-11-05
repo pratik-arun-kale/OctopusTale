@@ -8,9 +8,10 @@ This is a fully static web application for Tales (Octopus Tale), a sports techno
 
 - **Company Logo Integration**: Added Octopus Tale logo to header and footer across all pages
   - Logo displays "Octopus" in blue and "Tale" in white on transparent background
-  - Header logo (40px height) is clickable and navigates to home page
-  - Footer logo (48px height) provides brand consistency
+  - Header logo (60px height) is clickable and navigates to home page
+  - Footer logo (72px height) provides brand consistency
   - All pages (Home, About, Case Studies) now use shared Header component with logo
+  - Logo sizes increased by 50% from original implementation
 - **Database Dependencies Removed**: Fully static site with no database requirements
   - Removed all Drizzle ORM, PostgreSQL, and Neon Database dependencies
   - Contact form now uses dummy submission with console logging
