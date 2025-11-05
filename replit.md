@@ -6,6 +6,12 @@ This is a fully static web application for Tales (Octopus Tale), a sports techno
 
 ## Recent Changes (November 5, 2025)
 
+- **Featured Projects to Case Studies Navigation**: Enhanced user experience with direct navigation
+  - Clicking "View Full Case Study" in Featured Projects slideshow navigates to specific case study on All Case Studies page
+  - Uses URL query parameter (?project=id) to identify target case study
+  - Automatically expands the case study details on arrival
+  - Smooth scrolls to center the case study in viewport for immediate viewing
+  - Seamless cross-page navigation enhances portfolio browsing
 - **Company Logo Integration**: Added Octopus Tale logo to header and footer across all pages
   - Logo displays "Octopus" in blue and "Tale" in white on transparent background
   - Header logo (90px height) is clickable and navigates to home page

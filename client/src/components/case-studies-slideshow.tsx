@@ -257,7 +257,7 @@ export default function CaseStudiesSlideshow() {
                 </div>
 
                 {/* CTA */}
-                <Link href="/case-studies">
+                <Link href={`/case-studies?project=${currentCase.id}`}>
                   <button 
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-medium transition-all duration-300 transform hover:scale-105 text-sm"
                     data-testid="button-view-case-study"

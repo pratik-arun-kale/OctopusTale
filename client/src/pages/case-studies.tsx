@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ChevronDown, Clock, Building, Cpu, Target, Lightbulb, TrendingUp, Filter, Search } from 'lucide-react';
-import { Link } from 'wouter';
+import { Link, useLocation } from 'wouter';
 import Header from '@/components/header';
 import skateyImage from '@/assets/images/Skatey_Mobile_App_1757690069285.webp';
 import simukaImage from '@/assets/images/Simuka_Football_1757690069285.webp';
@@ -154,9 +154,30 @@ const allCaseStudies = [
 const industries = ['All', 'Sports Technology', 'Sports Entertainment', 'Gaming & Betting', 'Smart Infrastructure', 'E-Sports', 'Sports Health Tech', 'Social Impact Technology'];
 
 export default function CaseStudiesPage() {
+  const [location] = useLocation();
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCase, setSelectedCase] = useState<string | null>(null);
+  const caseRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+
+  // Check for project ID in URL and auto-open that case study
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const projectId = params.get('project');
+    
+    if (projectId) {
+      // Set the selected case to open it
+      setSelectedCase(projectId);
+      
+      // Scroll to the case study after a short delay to ensure rendering
+      setTimeout(() => {
+        const element = caseRefs.current[projectId];
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 300);
+    }
+  }, [location]);
 
   const filteredCases = allCaseStudies.filter(caseStudy => {
     const matchesIndustry = selectedIndustry === 'All' || caseStudy.industry === selectedIndustry;
@@ -277,6 +298,7 @@ export default function CaseStudiesPage() {
             {filteredCases.map((caseStudy) => (
               <div 
                 key={caseStudy.id}
+                ref={(el) => (caseRefs.current[caseStudy.id] = el)}
                 className="backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden hover:border-purple-500/50 transition-all duration-300"
                 style={{ backgroundColor: '#17161A' }}
               >
