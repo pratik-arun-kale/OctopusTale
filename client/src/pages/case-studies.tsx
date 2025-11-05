@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ChevronDown, Clock, Building, Cpu, Target, Lightbulb, TrendingUp, Filter, Search } from 'lucide-react';
 import { Link } from 'wouter';
+import Header from '@/components/header';
 import skateyImage from '@/assets/images/Skatey_Mobile_App_1757690069285.webp';
 import simukaImage from '@/assets/images/Simuka_Football_1757690069285.webp';
 import kasidImage from '@/assets/images/KASID Food Platform_1758108034668.webp';
@@ -168,27 +169,7 @@ export default function CaseStudiesPage() {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#040404' }}>
-      {/* Header */}
-      <header className="border-b border-white/10" style={{ backgroundColor: '#17161A' }}>
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <nav className="flex items-center justify-between">
-            <Link href="/">
-              <div className="text-2xl font-bold text-white cursor-pointer" data-testid="link-home">
-                Tales
-              </div>
-            </Link>
-            <div className="flex items-center gap-8">
-              <Link href="/" className="text-gray-300 hover:text-white transition-colors" data-testid="link-home-nav">
-                Home
-              </Link>
-              <Link href="/about" className="text-gray-300 hover:text-white transition-colors" data-testid="link-about">
-                About
-              </Link>
-              <span className="text-white border-b-2 border-purple-500">Case Studies</span>
-            </div>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="py-20 px-6">

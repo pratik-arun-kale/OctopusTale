@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useLocation } from "wouter";
+import logoImage from "@assets/WhatsApp Image 2025-11-04 at 9.16.02 PM-Photoroom_1762316573699.png";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -40,7 +41,18 @@ const Header = () => {
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-white" data-testid="logo">Tales</h1>
+            <button 
+              onClick={() => navigateToPage("/")} 
+              className="focus:outline-none"
+              data-testid="logo-button"
+            >
+              <img 
+                src={logoImage} 
+                alt="Octopus Tale" 
+                className="h-10 w-auto"
+                data-testid="logo"
+              />
+            </button>
           </div>
           
           {/* Desktop Navigation */}

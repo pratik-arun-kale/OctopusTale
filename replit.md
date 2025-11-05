@@ -2,16 +2,20 @@
 
 ## Overview
 
-This is a full-stack web application for Tales, a sports technology company that develops cutting-edge software solutions merging sports, technology, and AI. The platform serves as a comprehensive company portfolio showcasing their expertise in fan engagement, full-stack development, gaming, betting solutions, AI solutions, cloud solutions, and automation. The multi-page application features detailed service information, case studies carousel, and integrated contact system. Built with modern web technologies, it features a React frontend with shadcn/ui components, wouter routing, and an Express.js backend with PostgreSQL database integration.
+This is a fully static web application for Tales (Octopus Tale), a sports technology company that develops cutting-edge software solutions merging sports, technology, and AI. The platform serves as a comprehensive company portfolio showcasing their expertise in fan engagement, full-stack development, gaming, betting solutions, AI solutions, cloud solutions, and automation. The multi-page application features detailed service information, case studies with real project imagery, and an integrated contact form. Built with modern web technologies, it features a React frontend with shadcn/ui components, wouter routing, and an Express.js backend serving static content.
 
-## Recent Changes (August 21, 2025)
+## Recent Changes (November 5, 2025)
 
-- **About Us Page Created**: Complete new page with comprehensive business information and service details
-- **Service Card Integration**: "What We Do" section now links directly to About page sections with anchor navigation
-- **Updated Service Categories**: Business-focused solutions (Fan Engagement, Full Stack Developing, Gaming, Betting Solution, AI Solution, Cloud Solutions, Automation)
-- **Sport Tech Featured Card**: Changed from "AI" to "Sport Tech" with 2-column width matching reference design
-- **Cross-Page Navigation**: Header now properly routes between Home and About pages with section scrolling
-- **Consistent Design Language**: About page maintains same glassmorphism and Apple-like minimalist aesthetics
+- **Company Logo Integration**: Added Octopus Tale logo to header and footer across all pages
+  - Logo displays "Octopus" in blue and "Tale" in white on transparent background
+  - Header logo (40px height) is clickable and navigates to home page
+  - Footer logo (48px height) provides brand consistency
+  - All pages (Home, About, Case Studies) now use shared Header component with logo
+- **Database Dependencies Removed**: Fully static site with no database requirements
+  - Removed all Drizzle ORM, PostgreSQL, and Neon Database dependencies
+  - Contact form now uses dummy submission with console logging
+  - In-memory storage for any development needs
+- **Case Studies Page Header Fix**: Replaced custom inline header with shared Header component for consistency
 
 ## User Preferences
 
@@ -28,28 +32,16 @@ Preferred communication style: Simple, everyday language.
 - **Build Tool**: Vite for fast development and optimized production builds
 
 ### Backend Architecture
-- **Runtime**: Node.js with Express.js framework for RESTful API endpoints
+- **Runtime**: Node.js with Express.js framework serving static frontend
 - **Language**: TypeScript throughout the stack for consistent type safety
-- **Database ORM**: Drizzle ORM for type-safe database operations and migrations
-- **Session Management**: Built-in session handling with connect-pg-simple for PostgreSQL session storage
-- **Development**: Hot module replacement and development middleware integration
+- **Storage**: In-memory storage for any development needs (no database)
+- **Development**: Hot module replacement and development middleware integration via Vite
 
-### Data Storage Solutions
-- **Primary Database**: PostgreSQL configured through Neon Database serverless connection
-- **Schema Management**: Drizzle Kit for database migrations and schema synchronization
-- **Development Storage**: In-memory storage implementation for development/testing
-- **Data Validation**: Zod schemas for runtime type validation and API request/response validation
-
-### Authentication and Authorization
-- **Session-based Authentication**: Express sessions with PostgreSQL session store
-- **User Management**: Basic user registration and authentication system with username/password
-- **Storage Interface**: Abstracted storage layer supporting both in-memory and database implementations
-
-### API Design
-- **RESTful Endpoints**: Clean API structure with `/api/` prefix for all backend routes
-- **Contact System**: Form submission endpoint with validation and error handling
-- **Error Handling**: Centralized error middleware with proper HTTP status codes
-- **Request Logging**: Custom middleware for API request/response logging and performance monitoring
+### Data Management
+- **Fully Static**: No database dependencies or external storage requirements
+- **Contact Form**: Client-side validation with dummy submission (console logging)
+- **In-Memory Storage**: Simple storage interface for development/testing purposes
+- **Data Validation**: Zod schemas for runtime type validation of form inputs
 
 ## External Dependencies
 
@@ -59,10 +51,10 @@ Preferred communication style: Simple, everyday language.
 - **Lucide React**: Modern icon library with consistent design language
 - **class-variance-authority**: Utility for creating consistent component variants
 
-### Database and ORM
-- **Neon Database**: Serverless PostgreSQL database platform
-- **Drizzle ORM**: Type-safe ORM with excellent TypeScript integration
-- **connect-pg-simple**: PostgreSQL session store for Express sessions
+### Branding and Assets
+- **Company Logo**: Octopus Tale logo (blue "Octopus" + white "Tale") integrated in header and footer
+- **Case Study Images**: Real project screenshots in optimized .webp format with lazy loading
+- **Design System**: Glassmorphism with dark theme (#040404/#17161A), blue-purple gradients
 
 ### Development Tools
 - **Vite**: Build tool with HMR and optimized bundling
