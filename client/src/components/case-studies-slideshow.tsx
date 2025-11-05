@@ -40,7 +40,8 @@ const caseStudies = [
     projectDuration: '6 months',
     clientName: 'Simuka Football',
     imageUrl: simukaImage,
-    featured: true
+    featured: true,
+    techPartner: true
   },
   {
     id: '3',
@@ -55,7 +56,8 @@ const caseStudies = [
     projectDuration: '9 months',
     clientName: 'KASID Foundation',
     imageUrl: kasidImage,
-    featured: true
+    featured: true,
+    techPartner: true
   },
   {
     id: '4',
@@ -208,9 +210,16 @@ export default function CaseStudiesSlideshow() {
               {/* Content Section */}
               <div className="p-6 lg:p-8">
                 <div className="mb-4">
-                  <span className="inline-block px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-medium mb-3">
-                    {currentCase.industry}
-                  </span>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="inline-block px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-medium">
+                      {currentCase.industry}
+                    </span>
+                    {currentCase.techPartner && (
+                      <span className="inline-block px-2 py-1 rounded bg-red-600 text-white text-xs font-semibold">
+                        Tech Partner
+                      </span>
+                    )}
+                  </div>
                   <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2">
                     {currentCase.title}
                   </h3>

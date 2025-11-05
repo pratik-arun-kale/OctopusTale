@@ -6,6 +6,12 @@ This is a fully static web application for Tales (Octopus Tale), a sports techno
 
 ## Recent Changes (November 5, 2025)
 
+- **Tech Partner Badges**: Added red "Tech Partner" badges to highlight partnership projects
+  - **Simuka Football Mobile App**: Displays Tech Partner badge alongside Sports Entertainment category
+  - **KASID Food Platform**: Displays Tech Partner badge alongside Social Impact Technology category
+  - Badges appear across all views: home slideshow, featured projects grid, and all case studies list
+  - Distinctive red styling (bg-red-600) to stand out from purple industry tags
+
 - **Contact Section Redesign**: Replaced form with icon-based contact cards
   - **Email Card**: Opens Gmail Compose in new tab with pre-filled recipient (Prashanth@octopustale.co.in)
   - **Call Card**: Initiates phone call to +1 (343) 254-1255

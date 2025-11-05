@@ -42,7 +42,8 @@ const allCaseStudies = [
     projectDuration: '6 months',
     clientName: 'Simuka Football',
     imageUrl: simukaImage,
-    featured: true
+    featured: true,
+    techPartner: true
   },
   {
     id: '3',
@@ -57,7 +58,8 @@ const allCaseStudies = [
     projectDuration: '9 months',
     clientName: 'KASID Foundation',
     imageUrl: kasidImage,
-    featured: true
+    featured: true,
+    techPartner: true
   },
   {
     id: '4',
@@ -306,9 +308,16 @@ export default function CaseStudiesPage() {
                   )}
                 </div>
                 <div className="p-4">
-                  <span className="inline-block px-2 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs mb-2">
-                    {caseStudy.industry}
-                  </span>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="inline-block px-2 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs">
+                      {caseStudy.industry}
+                    </span>
+                    {caseStudy.techPartner && (
+                      <span className="inline-block px-2 py-1 rounded bg-red-600 text-white text-xs font-semibold">
+                        Tech Partner
+                      </span>
+                    )}
+                  </div>
                   <h3 className="text-lg font-bold text-white mb-2">{caseStudy.title}</h3>
                   <p className="text-gray-300 mb-3 line-clamp-2 text-sm">{caseStudy.description}</p>
                   <div className="flex items-center gap-3 text-xs text-gray-400">
@@ -360,9 +369,16 @@ export default function CaseStudiesPage() {
                   <div className="lg:col-span-2 p-5">
                     <div className="flex items-start justify-between mb-3">
                       <div>
-                        <span className="inline-block px-2 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs mb-2">
-                          {caseStudy.industry}
-                        </span>
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className="inline-block px-2 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs">
+                            {caseStudy.industry}
+                          </span>
+                          {caseStudy.techPartner && (
+                            <span className="inline-block px-2 py-1 rounded bg-red-600 text-white text-xs font-semibold">
+                              Tech Partner
+                            </span>
+                          )}
+                        </div>
                         <h3 className="text-xl lg:text-2xl font-bold text-white mb-2">{caseStudy.title}</h3>
                         <p className="text-lg text-purple-300 mb-3">{caseStudy.subtitle}</p>
                       </div>
