@@ -6,6 +6,17 @@ This is a fully static web application for Tales (Octopus Tale), a sports techno
 
 ## Recent Changes (November 5, 2025)
 
+- **Vercel Deployment Ready**: Converted project from Express server to static Vercel deployment
+  - Created `vercel.json` configuration for optimal deployment
+  - Added `api/health.ts` as example serverless function
+  - Created `.vercelignore` to exclude server files
+  - Removed server dependencies (express, passport, ws, esbuild, tsx)
+  - Updated build scripts: `dev`, `build`, `preview` (no more server.listen)
+  - Created `package.vercel.json` with clean dependencies
+  - Full deployment guide in `VERCEL_DEPLOYMENT.md`
+  - Quick start guide in `VERCEL_QUICK_START.md`
+  - **Action Required**: Copy `package.vercel.json` to `package.json` before deploying
+
 - **Tech Partner Badges**: Added red "Tech Partner" badges to highlight partnership projects
   - **Simuka Football Mobile App**: Displays Tech Partner badge alongside Sports Entertainment category
   - **KASID Food Platform**: Displays Tech Partner badge alongside Social Impact Technology category
