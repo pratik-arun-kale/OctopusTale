@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tales - Sports Technology Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/index.js" type="module"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#1E40AF',
+                        'secondary': '#059669', 
+                        'accent': '#DC2626',
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="font-inter bg-white text-gray-900">
+    <!-- @COMPONENT: Header [navigation, logo, mobile menu] -->
+    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-primary">Tales</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-gray-900 hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-event="click:scrollToSection">Home</a>
+                        <a href="#services" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-event="click:scrollToSection">Service</a>
+                        <a href="#about" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-event="click:scrollToSection">About Us</a>
+                        <button class="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors" data-event="click:openContact">
+                            Talk to Our Team
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="bg-gray-50 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none" data-event="click:toggleMobileMenu">
+                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden" data-mobile-menu>
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                    <a href="#home" class="text-gray-900 hover:text-primary block px-3 py-2 text-base font-medium" data-event="click:scrollToSection">Home</a>
+                    <a href="#services" class="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium" data-event="click:scrollToSection">Service</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium" data-event="click:scrollToSection">About Us</a>
+                    <button class="bg-primary text-white block w-full text-left px-3 py-2 text-base font-medium rounded-md mt-2 hover:bg-blue-700 transition-colors" data-event="click:openContact">
+                        Talk to Our Team
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- @END_COMPONENT: Header -->
+
+    <!-- @COMPONENT: Hero [main heading, value props, CTA] -->
+    <section id="home" class="pt-16 bg-gradient-to-br from-slate-50 to-blue-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+            <div class="text-center">
+                <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+                    Why Teams & Enterprises Choose Us
+                </h1>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-gray-700 text-sm leading-relaxed">Industry-focused expertise in sports tech</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                            <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-gray-700 text-sm leading-relaxed">Proven track record in digital transformation projects</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path>
+                            </svg>
+                        </div>
+                        <p class="text-gray-700 text-sm leading-relaxed">Agile, scalable, and cloud-ready solutions</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-gray-700 text-sm leading-relaxed">End-to-end support from idea to launch</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero -->
+
+    <!-- @COMPONENT: Services [what we do section] -->
+    <section id="services" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">What We Do</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Digital Transformation Solutions</h3>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Sports App Development</h3>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Custom Software & Cloud Solutions</h3>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">AI & Data Analytics</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Services -->
+
+    <!-- @COMPONENT: FeaturedProject [showcase FanConnect case study] -->
+    <section class="py-16 lg:py-24 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">Featured Projects</h2>
+                <p class="text-gray-600">Case Studies</p>
+                <a href="#projects" class="inline-block mt-4 text-primary hover:text-blue-700 font-medium" data-event="click:scrollToSection">See more case studies →</a>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4">
+                <!-- Project mockup image -->
+                <!-- A modern mobile app interface showing sports scores and real-time data -->
+                <div class="h-64 lg:h-auto bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Mobile sports app interface" class="w-full h-full object-cover" data-mock-image="true" />
+                </div>
+                
+                <div class="p-8 lg:p-12">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">FanConnect – Live Sports Engagement App</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        A mobile app delivering real-time scores, live commentary, and interactive polls, increasing fan engagement by 65% for a major cricket league.
+                    </p>
+                    <button class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors" data-event="click:viewProject">
+                        Read More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: FeaturedProject -->
+
+    <!-- @COMPONENT: About [quick intro section] -->
+    <section id="about" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">Quick Intro</h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    We develop cutting-edge software solutions that merge sports, technology, and AI to deliver powerful digital experiences. By combining innovation with deep industry expertise, we help sports organizations, teams, and businesses transform operations, engage fans, and make data-driven decisions. Our mission is to push the boundaries of sports technology, creating intelligent platforms that inspire and perform at the highest level.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: About -->
+
+    <!-- @COMPONENT: Projects [our projects showcase grid] -->
+    <section id="projects" class="py-16 lg:py-24 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Our Projects</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive AI-powered solutions designed to elevate every aspect of sports performance and team management.
+                </p>
+            </div>
+            
+            <!-- @MAP: projects.map(project => ( -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1: Simuka Football -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <!-- Android mobile app interface showing football/soccer content -->
+                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="Football mobile app interface" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3" data-bind="project.name">Simuka Football</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed" data-bind="project.description">
+                            A South Africa based Sports application developer in Android. Simuka Football is place for fans to meet, engage, express themselves and immerse in the beautiful game. It's all about football.
+                        </p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                                Real-time Betting
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                                Make Chat-groups
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                                Analyse
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                                Group play
+                            </div>
+                        </div>
+                        <button class="bg-primary text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors" data-event="click:viewProject">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Project 2: KasiD Food Delivery -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <!-- Food delivery mobile app interface showing local township delivery -->
+                    <img src="https://pixabay.com/get/gbe1b15d79a6205b9f3241b4e43a9f6daaf08033d20a7ce81461b9c4a0e72acaf9ac99f8e52dcd74822edcd1660daabd2069aa22ab729c28287a4834049ec1a1c_1280.jpg" alt="Food delivery app interface" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3" data-bind="project.name">KasiD Food Delivery</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed" data-bind="project.description">
+                            KasiD is a community-focused, township-based delivery platform transforming access to essentials across South African townships.
+                        </p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-secondary rounded-full mr-2"></span>
+                                Real-Time Tracking
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-secondary rounded-full mr-2"></span>
+                                Food, Groceries
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-secondary rounded-full mr-2"></span>
+                                Multi-Device Experience
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-secondary rounded-full mr-2"></span>
+                                Secure Payments
+                            </div>
+                        </div>
+                        <button class="bg-secondary text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-emerald-700 transition-colors" data-event="click:viewProject">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Project 3: AAMCO -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <!-- Professional business website showing bathroom partition products -->
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="Business website interface" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3" data-bind="project.name">AAMCO</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed" data-bind="project.description">
+                            Aamco has over 50 years of experience to the design, manufacture & sales of toilet and bathroom partitions, screens, shower units & related products.
+                        </p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
+                                yii2 framework
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
+                                Toilet Partition
+                            </div>
+                        </div>
+                        <button class="bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors" data-event="click:viewProject">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Project 4: The Alignment Shoppe -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <!-- Truck service and repair business website -->
+                    <img src="https://pixabay.com/get/g6686c6810f05aee22483f4322c997b3ef165ef9a575bb9a224a921a2c0d1545c7201cf85fd972c795cb57b8bfb397d1ace19e72c1ab97fbe18350adda4fa8f31_1280.jpg" alt="Truck service website interface" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3" data-bind="project.name">The Alignment Shoppe</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed" data-bind="project.description">
+                            The Alignment Shoppe has serviced the Sioux Falls area in semi truck service and repair since 2009.
+                        </p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-purple-600 rounded-full mr-2"></span>
+                                Developed in Wordpress
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-purple-600 rounded-full mr-2"></span>
+                                Automated highlights
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-purple-600 rounded-full mr-2"></span>
+                                Custom dashboards
+                            </div>
+                        </div>
+                        <button class="bg-purple-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-purple-700 transition-colors" data-event="click:viewProject">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- @END_MAP )) -->
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Projects -->
+
+    <!-- @COMPONENT: Stats [client satisfaction section] -->
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-8">
+                <div class="text-5xl lg:text-6xl font-bold text-primary mb-4" data-bind="stats.clients">20+</div>
+                <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Happiest Clients</h2>
+                <p class="text-lg text-gray-600">
+                    We provide Technology consulting to understand your specific needs and provide the right solutions
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Stats -->
+
+    <!-- @COMPONENT: Contact [contact form section] -->
+    <section id="contact" class="py-16 lg:py-24 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+                <p class="text-lg text-gray-600">Ready to transform your sports technology? Let's talk.</p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-8 lg:p-12">
+                <form class="space-y-6" data-event="submit:handleContactForm">
+                    <!-- @STATE: formData:object = {name:'', email:'', message:''} -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Your full name" required data-bind="formData.name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="your@email.com" required data-bind="formData.email">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-vertical" placeholder="Tell us about your project..." required data-bind="formData.message"></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 focus:ring-4 focus:ring-primary focus:ring-opacity-50 transition-all" data-implementation="Should validate form before submission">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact -->
+
+    <!-- @COMPONENT: Footer [company info, links, copyright] -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4">Tales</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Every field needs a management system and the more automated the better in this age where technology rules the world. Every sport has its own speciality and we create the necessary tools for management through apps and provide consultation so you know better. Manage people, places and finance through our apps to make everyday sport data easier to handle. We have successfully created apps already available in play store and are working on many more.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#services" class="hover:text-white transition-colors" data-event="click:scrollToSection">Digital Transformation</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors" data-event="click:scrollToSection">Sports App Development</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors" data-event="click:scrollToSection">Custom Software</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors" data-event="click:scrollToSection">AI & Analytics</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#about" class="hover:text-white transition-colors" data-event="click:scrollToSection">About Us</a></li>
+                        <li><a href="#projects" class="hover:text-white transition-colors" data-event="click:scrollToSection">Projects</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors" data-event="click:scrollToSection">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Tales. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        (function() {
+            // Smooth scroll functionality
+            // TODO: Implement smooth scroll navigation
+            function smoothScroll(targetId) {
+                const target = document.querySelector(targetId);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+
+            // Mobile menu toggle
+            // TODO: Implement mobile menu state management
+            function toggleMobileMenu() {
+                const mobileMenu = document.querySelector('[data-mobile-menu]');
+                if (mobileMenu) {
+                    mobileMenu.classList.toggle('hidden');
+                }
+            }
+
+            // Contact form handling
+            // TODO: Implement form validation and API submission
+            function handleContactForm(event) {
+                event.preventDefault();
+                console.log('Form submitted - TODO: Add API integration');
+                // Placeholder for form submission logic
+                alert('Thank you for your message! We will get back to you soon.');
+            }
+
+            // Event listeners
+            document.addEventListener('click', function(e) {
+                const target = e.target;
+                
+                // Handle navigation links
+                if (target.getAttribute('href') && target.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    smoothScroll(target.getAttribute('href'));
+                }
+                
+                // Handle mobile menu toggle
+                if (target.closest('[data-event*="toggleMobileMenu"]')) {
+                    e.preventDefault();
+                    toggleMobileMenu();
+                }
+            });
+
+            // Handle form submission
+            document.addEventListener('submit', function(e) {
+                if (e.target.matches('[data-event*="handleContactForm"]')) {
+                    handleContactForm(e);
+                }
+            });
+
+            // Header scroll effect
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 0) {
+                    header.classList.add('shadow-md');
+                } else {
+                    header.classList.remove('shadow-md');
+                }
+            });
+
+        })();
+    </script>
+</body>
+</html>
