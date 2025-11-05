@@ -6,7 +6,7 @@ const Contact = () => {
       icon: Mail,
       label: "Email",
       value: "Prashanth@octopustale.co.in",
-      href: "mailto:Prashanth@octopustale.co.in",
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=Prashanth@octopustale.co.in",
       testId: "link-email",
       description: "Send us an email"
     },
@@ -43,8 +43,8 @@ const Contact = () => {
               <a
                 key={method.label}
                 href={method.href}
-                target={method.label === "LinkedIn" ? "_blank" : undefined}
-                rel={method.label === "LinkedIn" ? "noopener noreferrer" : undefined}
+                target={method.label === "Email" || method.label === "LinkedIn" ? "_blank" : undefined}
+                rel={method.label === "Email" || method.label === "LinkedIn" ? "noopener noreferrer" : undefined}
                 className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-2xl p-8 hover:bg-white/15 hover:scale-105 transition-all duration-300 group"
                 data-testid={method.testId}
               >

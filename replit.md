@@ -6,6 +6,13 @@ This is a fully static web application for Tales (Octopus Tale), a sports techno
 
 ## Recent Changes (November 5, 2025)
 
+- **Contact Section Redesign**: Replaced form with icon-based contact cards
+  - **Email Card**: Opens Gmail Compose in new tab with pre-filled recipient (Prashanth@octopustale.co.in)
+  - **Call Card**: Initiates phone call to +1 (343) 254-1255
+  - **LinkedIn Card**: Links to https://www.linkedin.com/in/prashanthiyer
+  - Glassmorphism design with gradient icons and hover effects
+  - All cards open in new tabs (Email and LinkedIn) for better UX
+
 - **Featured Projects to Case Studies Navigation**: Enhanced user experience with seamless navigation
   - **Home Page Slideshow**: Clicking "View Full Case Study" navigates to specific case study on All Case Studies page
     - Uses URL query parameter (?project=id) to identify target case study
